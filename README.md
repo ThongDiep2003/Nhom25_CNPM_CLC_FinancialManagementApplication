@@ -19,7 +19,6 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   Use case bắt đầu khi khách truy cập vào trang Register.
-
 <br><br>
   1. Khách điền vào các thông tin mà hệ thống yêu cầu và nhấn "Register".
   2. Khách tiến hành xác thực OTP.
@@ -27,16 +26,13 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Hệ thống tạo mới tài khoản và lưu thông tin vào cơ sở dữ liệu.
   5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang Login.
 <br><br>
-   
   * Alternative flow (Thất bại): 
   Nếu người dùng nhập thiếu thông tin, trùng email, mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
-
 <br><br>
   1. Hệ thống mô tả lý do không thể tạo mới tài khoản.
   2. Hệ thống hiển thị lại biểu mẫu cho người dùng chỉnh sửa thông tin đăng ký.
   3. Người dùng nhập lại thông tin được yêu cầu, Basic Flow khi đó sẽ tiếp tục tại bước 1.
 <br><br>
-  
 - Extension point:
 
 ## UC02. Đăng nhập.
@@ -49,13 +45,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công): 
   Use case được kích hoạt khi người dùng cần đăng nhập vào hệ thống hoặc xác thực danh tính để sử dụng các chức năng của hệ thống:
-
 <br><br>
   1. Người dùng nhập tài khoản và mật khẩu vào các ô input và bấm "Login".
   2. Hệ thống kiểm tra input và xác thực.
   3. Hệ thống thông báo xác thực thành công.
 <br><br>
-   
   * Alternative flow (Thất bại): 
   Khi xác thực thất bại hoặc xảy ra lỗi: hệ thống thông báo lỗi sai.
 - Extension point:
@@ -67,13 +61,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Tài khoản được đăng xuất thành công ra khỏi hệ thống.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng bấm vào nút "Logout" ở trang Setting.
   2. Hệ thống thực hiện đăng xuất cho người dùng.
   3. Chuyển qua trang đăng nhập.
 <br><br>
-  
   * Alternative flow (Thất bại):
 - Extension point:
 
@@ -84,7 +76,6 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Tài khoản của người dùng được cập nhật mật khẩu mới.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng chọn "Forgot Password" ở trang Login.
   2. Hệ thống hiển thị trang ForgotPassword .
@@ -95,16 +86,13 @@ Nguyễn Hồng Thông Điệp – 21110166
   7. Người dùng nhập mật khẩu mới và chọn “Reset”.
   8. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
-
   * Alternative flow (Thất bại):
   Đặt lại mật khẩu thất bại.
-
 <br><br>
   1. Hệ thống kiểm tra email thất bại.
   2. Hệ thống hiện thông báo lỗi.
   3. Người dùng nhập lại email.
 <br><br>
-  
   Use Case quay lại bước 3 của Basic flow.
 - Extension point:
 
@@ -115,7 +103,6 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Tài khoản của người dùng được cập nhật mật khẩu mới.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng chọn "Change Password" ở trang Setting.
   2. Hệ thống hiển thị trang ChangePassword .
@@ -123,16 +110,13 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Hệ thống kiểm tra mật khẩu hiện tại của người dùng, nếu đúng thì sẽ đặt lại mật khẩu.
   5. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
-
   * Alternative flow (Thất bại):
   Đổi mật khẩu thất bại.
-
 <br><br>
   1. Hệ thống kiểm tra thấy mật khẩu hiện tại không trùng khớp.
   2. Hệ thống hiện thông báo lỗi
   3. Người dùng nhập lại mật khẩu.
 <br><br>
-  
   Use Case quay lại bước 3 của Basic flow
 - Extension point:
 
@@ -143,14 +127,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Hệ thống hiển thị thống kê của người dùng.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng chọn "Statistic".
   2. Hệ thống truy cập dữ liệu người dùng, thống kê thu nhập và chi tiêu của người dùng và hiển thị ra trang thống kê.
 <br><br>
-
   * Alternative flow (Thất bại):
-
   <br><br>
   1. Hệ thống kiểm tra thấy thông tin thu nhập và chi tiêu của người dùng không tồn tại.
   2. Hệ thống thông báo người dùng không có thông tin thu nhập và chi tiêu.
@@ -165,22 +146,18 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Hệ thống hiển thị giao dịch vừa thêm của người dùng.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng chọn "Add Transaction".
   2. Người dùng điền và chọn các thông tin giao dịch, sau đó bấm "Add".
   3. Hệ thống xác nhật và cập nhật vào dữ liệu của người dùng.
   4. Hệ thống thông báo thêm giao dịch thành công.
 <br><br>
-  
   * Alternative flow (Thất bại):
   Thêm giao dịch thất bại khi người dùng điền thông tin giao dịch sai định dạng.
-
 <br><br>
   1. Hệ thống kiểm tra thông tin giao dịch mới.
   2. Hệ thống thông báo thông tin giao dịch không hợp lệ và yêu cầu người dùng điền lại.
 <br><br>
-  
      Use case quay lại bước 2 Basic flow.
 - Extension point:
 
@@ -191,7 +168,6 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Giao dịch được xóa khỏi cơ sở dữ liệu và không còn xuất hiện trong danh sách giao dịch.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch.
   2. Hệ thống sẽ hiển thị trang Detail Transaction, trong đó có chứa nút Delete Transaction.
@@ -199,7 +175,6 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Người dùng nhấn nút Confirm để xác thực yêu cầu.
   5. Hệ thống xóa giao dịch khỏi cơ sở dữ liệu và cập nhật danh sách giao dịch.
 <br><br>
-
   * Alternative flow (Thất bại):
   Nếu có lỗi xảy ra khi xóa giao dịch, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:
@@ -211,14 +186,12 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Thông tin giao dịch được cập nhật trong cơ sở dữ liệu.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch cụ thể.
   2. Hệ thống sẽ dẫn người dùng vào trang Detail Transaction có chứa nút Edit.
   3. Người dùng, nhấn nút Edit để chuyển sang trang thay đổi thông tin giao dịch (ví dụ: số tiền, ghi chú, loại giao dịch) rồi nhấn nút Confirm.
   4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
 <br><br>
-
   * Alternative flow (Thất bại):
   Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
 - Extension point:  
@@ -230,13 +203,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Post-conditions: Ngôn ngữ của giao diện được thay đổi theo lựa chọn của người dùng.
 - Flow of events: 
   * Basic flow (Thành công):
-
   <br><br>
   1. Người dùng truy cập phần "Settings" và chọn mục "Language".
   2. Người dùng chọn ngôn ngữ mong muốn từ danh sách các ngôn ngữ có sẵn.
   3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
 <br><br>
-
   * Alternative flow (Thất bại):
   Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:  
