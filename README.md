@@ -1,11 +1,11 @@
-I. Thành viên nhóm 07:
+# I. Thành viên nhóm 07:
 Nguyễn Hồng Thông Điệp – 21110166
 Đoàn Thái Sơn – 21110289
 
-I. Đề tài: 
+# II. Đề tài: 
 Ứng dụng quản lý tài chính.
 
-I. Đặc tả use case:
+# III. Đặc tả use case:
 
 UC01. Register
 
