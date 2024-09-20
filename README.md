@@ -358,7 +358,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 # IV. Hình ảnh các giao diện: 
 
-##0. Onboarding.
+## 0. Onboarding.
 
 ![image](https://github.com/user-attachments/assets/a9196689-6907-4f52-a01d-2dbc08b2d4e1)
 ![image](https://github.com/user-attachments/assets/f5faaa8d-f7ab-472d-a83f-e3b5fa972724)
@@ -367,11 +367,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 ![image](https://github.com/user-attachments/assets/684dd605-1a29-48c3-b08b-df07b192b2e5)
 
 
-##1. Login.
+## 1. Login.
 
 ![image](https://github.com/user-attachments/assets/9906c24c-9a2b-4c13-94a2-e7759893caa8)
 
-##2. Register.
+## 2. Register.
 
 ![image](https://github.com/user-attachments/assets/c6a52463-93ad-4124-8feb-8f69dcc73326)
 ![image](https://github.com/user-attachments/assets/102e7382-1bae-4c19-8a9c-2a2072cfa185)
@@ -379,7 +379,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 ![image](https://github.com/user-attachments/assets/de6ba370-5424-4754-80fd-a2d1de5e2093)
 
 
-##3. Forgot Password.
+## 3. Forgot Password.
 
 ![image](https://github.com/user-attachments/assets/086996f7-d512-4832-9bdf-cf238a46e10a)
 ![image](https://github.com/user-attachments/assets/ef1dbb71-ef88-432a-861f-6b329cb1f3b6)
@@ -387,33 +387,33 @@ Nguyễn Hồng Thông Điệp – 21110166
 ![image](https://github.com/user-attachments/assets/c88eca53-79e4-43a2-92aa-15735e01a12b)
 ![image](https://github.com/user-attachments/assets/8e249e27-2c05-482c-a5bc-a25d5f08cd77)
 
-##4. Change Password.
+## 4. Change Password.
 
 ![image](https://github.com/user-attachments/assets/1b738fdb-996e-4521-bcae-ec41e5126ba3)
 ![image](https://github.com/user-attachments/assets/b2034e09-df16-4281-9f65-c9e95d0de755)
 
-##5. Home.
+## 5. Home.
 
 ![image](https://github.com/user-attachments/assets/61ab93b4-3725-468a-9551-9858804dd8a2)
 
-##6. Transaction.
+## 6. Transaction.
 
 ![image](https://github.com/user-attachments/assets/995b7fe6-0a61-4517-9e8a-b9aabf4e62fb)
 ![image](https://github.com/user-attachments/assets/dd5080d4-4294-438a-babd-e8e9b745be37)
 
-##7. Edit Transaction.
+## 7. Edit Transaction.
 
 ![image](https://github.com/user-attachments/assets/92df5a50-5b66-424f-bf5c-4cd68ae05977)
 
-##8. Search Transaction.
+## 8. Search Transaction.
 
 ![image](https://github.com/user-attachments/assets/33e38640-e7a5-456a-bc89-d39236e6e4f5)
 
-##9. Statistic.
+## 9. Statistic.
 
 ![image](https://github.com/user-attachments/assets/3eff8f03-6c76-4636-988e-86b1aea5383a)
 
-##10. Add Transaction.
+## 10. Add Transaction.
 
 ![image](https://github.com/user-attachments/assets/52ed2af6-8b39-4fd5-b5f5-763d1ffc1612)
 ![image](https://github.com/user-attachments/assets/6f3cf0a1-0873-4742-a3a8-64b18eda6923)
@@ -421,47 +421,47 @@ Nguyễn Hồng Thông Điệp – 21110166
 ![image](https://github.com/user-attachments/assets/a186c546-3aab-49c5-a9d3-689b770fd85c)
 ![image](https://github.com/user-attachments/assets/d79bfcf9-271d-442a-86b2-6ff45aab8d97)
 
-##11. Transaction Budget.
+## 11. Transaction Budget.
 
 ![image](https://github.com/user-attachments/assets/6c81e359-6604-42b7-b27e-05dcb7ef786e)
 ![image](https://github.com/user-attachments/assets/ee83f1d2-c27c-4386-823d-3cafab755589)
 
 
-##12. Personal Budget.
+## 12. Personal Budget.
 
 ![image](https://github.com/user-attachments/assets/b956f79c-c104-46ce-9176-beb2f9b3ba00)
 
-##13. Goal.
+## 13. Goal.
 
 ![image](https://github.com/user-attachments/assets/3ded84e4-ed0d-42ff-8f0a-c724d0ee8c7a)
 
-##14. Setting.
+## 14. Setting.
 
 ![image](https://github.com/user-attachments/assets/074bafbf-1251-4706-b7ef-996f55a26a1f)
 
-##15. Profile.
+## 15. Profile.
 
 ![image](https://github.com/user-attachments/assets/125f6522-f120-4e38-b3fc-f93538c9d449)
 
-##16. Edit Profile.
+## 16. Edit Profile.
 
 ![image](https://github.com/user-attachments/assets/581b7aa7-83c8-471b-85e3-fa401f627027)
 
-##17. Add New Card.
+## 17. Add New Card.
 
 ![image](https://github.com/user-attachments/assets/1c29c1c2-fef0-4cac-88b6-93b6d59687fe)
 ![image](https://github.com/user-attachments/assets/30930eb3-3d25-4e1b-8b1f-135fbb370511)
 ![image](https://github.com/user-attachments/assets/9c543589-6cd1-4f06-8f63-1c665cfce04c)
 
-##18. Change Langue.
+## 18. Change Langue.
 
 ![image](https://github.com/user-attachments/assets/d72fb651-6877-4a78-b300-365e43325d5e)
 
-##19. Change Password.
+## 19. Change Password.
 
 ![image](https://github.com/user-attachments/assets/e28f5170-a1dc-4e58-bfd7-37591b26324e)
 
-##20. Term & Condition.
+## 20. Term & Condition.
 
 ![image](https://github.com/user-attachments/assets/6742b039-b1d0-4051-b01f-5811e0d56e76)
 
