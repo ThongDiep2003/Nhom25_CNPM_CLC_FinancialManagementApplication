@@ -14,7 +14,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Actor: Guest.
 - Pre-conditions: Không. 
 - Post-conditions: 
-  * Nếu đăng ký thành công: Người dùng được tạo mới tài khoản, thông tin cá nhân được lưu vào cơ sở dữ liệu.
+  -* Nếu đăng ký thành công: Người dùng được tạo mới tài khoản, thông tin cá nhân được lưu vào cơ sở dữ liệu.
   * Nếu đăng ký không thành công: Thông báo không tạo được tài khoản, buộc người dùng nhập lại thông tin cho chính xác.
 - Flow of events: 
 - Basic flow (Thành công): 
