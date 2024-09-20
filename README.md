@@ -379,35 +379,36 @@ Nguyễn Hồng Thông Điệp – 21110166
 ![image](https://github.com/user-attachments/assets/de6ba370-5424-4754-80fd-a2d1de5e2093)
 
 
-## 3. Forgot Password.
+## 4. Forgot Password.
 
-![image](https://github.com/user-attachments/assets/086996f7-d512-4832-9bdf-cf238a46e10a)
-![image](https://github.com/user-attachments/assets/ef1dbb71-ef88-432a-861f-6b329cb1f3b6)
+![image](https://github.com/user-attachments/assets/a9f3de47-de6b-4977-81cb-a8749bc2f33a)
 
-![image](https://github.com/user-attachments/assets/c88eca53-79e4-43a2-92aa-15735e01a12b)
-![image](https://github.com/user-attachments/assets/8e249e27-2c05-482c-a5bc-a25d5f08cd77)
+![image](https://github.com/user-attachments/assets/563a3135-e3aa-449b-8925-4a932343b783)
 
-## 4. Change Password.
 
-![image](https://github.com/user-attachments/assets/1b738fdb-996e-4521-bcae-ec41e5126ba3)
-![image](https://github.com/user-attachments/assets/b2034e09-df16-4281-9f65-c9e95d0de755)
+![image](https://github.com/user-attachments/assets/f1de1d75-65c4-47ca-9214-cc801c3511ae)
+![image](https://github.com/user-attachments/assets/6d87c37c-2c8d-48e0-9402-933c3c61a6f6)
 
 ## 5. Home.
 
-![image](https://github.com/user-attachments/assets/61ab93b4-3725-468a-9551-9858804dd8a2)
+![image](https://github.com/user-attachments/assets/f1e6614d-1ed4-4f38-9418-6755b1ad5ca6)
+
 
 ## 6. Transaction.
 
-![image](https://github.com/user-attachments/assets/995b7fe6-0a61-4517-9e8a-b9aabf4e62fb)
-![image](https://github.com/user-attachments/assets/dd5080d4-4294-438a-babd-e8e9b745be37)
+![image](https://github.com/user-attachments/assets/e1caff41-b493-4bcb-8a95-d7793379cde0)
+![image](https://github.com/user-attachments/assets/7ca641e8-17f3-4f66-a2a1-cd12879ed797)
+
 
 ## 7. Edit Transaction.
 
-![image](https://github.com/user-attachments/assets/92df5a50-5b66-424f-bf5c-4cd68ae05977)
+![image](https://github.com/user-attachments/assets/5fe543de-e303-4e2f-9fb1-5af1030591be)
+
 
 ## 8. Search Transaction.
 
-![image](https://github.com/user-attachments/assets/33e38640-e7a5-456a-bc89-d39236e6e4f5)
+![image](https://github.com/user-attachments/assets/6d425f16-77eb-4e16-a719-a7560e766dd4)
+
 
 ## 9. Statistic.
 
