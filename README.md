@@ -460,7 +460,8 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 19. Change Password.
 
-![image](https://github.com/user-attachments/assets/e28f5170-a1dc-4e58-bfd7-37591b26324e)
+![image](https://github.com/user-attachments/assets/7f2e62e6-8fa4-4092-92fe-a0ae8a3cb9f6)
+
 
 ## 20. Term & Condition.
 
