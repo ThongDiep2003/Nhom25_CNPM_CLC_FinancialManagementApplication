@@ -19,14 +19,14 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   Use case bắt đầu khi khách truy cập vào trang Register.
-\\
+&nbsp;
 
   1. Khách điền vào các thông tin mà hệ thống yêu cầu và nhấn "Register".
   2. Khách tiến hành xác thực OTP.
   3. Hệ thống xác thực thông tin theo quy định.
   4. Hệ thống tạo mới tài khoản và lưu thông tin vào cơ sở dữ liệu.
   5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang Login.
-\\
+&nbsp;
    
   * Alternative flow (Thất bại): 
   Nếu người dùng nhập thiếu thông tin, trùng email, mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
