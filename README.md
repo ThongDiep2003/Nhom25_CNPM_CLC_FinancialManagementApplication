@@ -449,14 +449,18 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 17. Add New Card.
 
-![image](https://github.com/user-attachments/assets/d18143a6-3a79-41c5-8e36-805848b509c0)
-![image](https://github.com/user-attachments/assets/05d9fbc5-2250-4f59-985c-91a5e0b12bef)
-![image](https://github.com/user-attachments/assets/9f8c4b27-cda2-4d0f-b8d4-a4750a9e3cea)
+![image](https://github.com/user-attachments/assets/6e546395-c55e-492d-9f4c-9078e0d9811b)
+
+![image](https://github.com/user-attachments/assets/0b03ebab-f893-438b-a3ff-67e8963f21ef)
+
+![image](https://github.com/user-attachments/assets/93035104-4a68-4b77-b4bf-557ef5e1b007)
+
 
 
 ## 18. Change Langue.
 
-![image](https://github.com/user-attachments/assets/66140c9f-8f06-4808-8333-86f201e8fd07)
+![image](https://github.com/user-attachments/assets/73d2b379-890d-4b69-8ce9-3a726e4ed144)
+
 
 
 ## 19. Change Password.
