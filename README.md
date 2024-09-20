@@ -360,29 +360,37 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 0. Onboarding.
 
-![image](https://github.com/user-attachments/assets/a9196689-6907-4f52-a01d-2dbc08b2d4e1)
-![image](https://github.com/user-attachments/assets/f5faaa8d-f7ab-472d-a83f-e3b5fa972724)
+![image](https://github.com/user-attachments/assets/12ed823f-1cfb-4568-b7f7-66180bfe6f28)
+![image](https://github.com/user-attachments/assets/96965649-4d52-4475-8591-855356fc87e6)
 
-![image](https://github.com/user-attachments/assets/af7d6bc8-c2ab-4508-926f-3ba478989432)
-![image](https://github.com/user-attachments/assets/684dd605-1a29-48c3-b08b-df07b192b2e5)
+![image](https://github.com/user-attachments/assets/3fb8033f-3b81-481f-96a9-05558d7ff4a4)
+![image](https://github.com/user-attachments/assets/0642df1d-8867-4589-8a44-d905968b7892)
+
 
 
 ## 1. Login.
 
-![image](https://github.com/user-attachments/assets/9906c24c-9a2b-4c13-94a2-e7759893caa8)
+
+![image](https://github.com/user-attachments/assets/d8fa102d-ad56-44d5-9911-bd70a7923ab0)
+
 
 ## 2. Register.
 
-![image](https://github.com/user-attachments/assets/c6a52463-93ad-4124-8feb-8f69dcc73326)
-![image](https://github.com/user-attachments/assets/102e7382-1bae-4c19-8a9c-2a2072cfa185)
 
-![image](https://github.com/user-attachments/assets/de6ba370-5424-4754-80fd-a2d1de5e2093)
+![image](https://github.com/user-attachments/assets/d52a0f88-3379-4ee1-8311-87f9813a1672)
+![image](https://github.com/user-attachments/assets/8949b4c5-8023-4895-bf19-eda8059c0b72)
+
 
 
 ## 4. Forgot Password.
 
-![image](https://github.com/user-attachments/assets/a9f3de47-de6b-4977-81cb-a8749bc2f33a)
 
+![image](https://github.com/user-attachments/assets/ee7980f6-5e8b-40df-8ca2-75d2b918cbe1)
+
+![image](https://github.com/user-attachments/assets/da73a956-90ec-4bcb-9f09-df89f3f14321)
+
+
+![image](https://github.com/user-attachments/assets/a9f3de47-de6b-4977-81cb-a8749bc2f33a)
 ![image](https://github.com/user-attachments/assets/563a3135-e3aa-449b-8925-4a932343b783)
 
 
