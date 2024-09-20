@@ -430,7 +430,8 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 12. Personal Budget.
 
-![image](https://github.com/user-attachments/assets/2fc2dba1-e646-4dd2-b974-96cc25f17f34)
+![image](https://github.com/user-attachments/assets/56d4f238-f50a-4387-8279-fd38cd3a68da)
+
 
 
 ## 13. Goal.
