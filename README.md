@@ -151,3 +151,32 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Alternative flow (Thất bại):
   Nếu có lỗi xảy ra khi xóa giao dịch, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:
+
+## UC09. Chỉnh sửa giao dịch.
+- Brief description: Người dùng chỉnh sửa thông tin của một giao dịch đã tồn tại trong danh sách giao dịch.
+- Actor: User.
+- Pre-conditions: Người dùng đã có các giao dịch được ghi nhận.
+- Post-conditions: Thông tin giao dịch được cập nhật trong cơ sở dữ liệu.
+- Flow of events: 
+- Basic flow (Thành công): 
+  1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch cụ thể.
+  2. Hệ thống sẽ dẫn người dùng vào trang Detail Transaction có chứa nút Edit.
+  3. Người dùng, nhấn nút Edit để chuyển sang trang thay đổi thông tin giao dịch (ví dụ: số tiền, ghi chú, loại giao dịch) rồi nhấn nút Confirm.
+  4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
+- Alternative flow (Thất bại):
+  Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
+- Extension point:  
+
+## UC10. Chọn ngôn ngữ.
+- Brief description: Người dùng thay đổi ngôn ngữ giao diện của ứng dụng.
+- Actor: User.
+- Pre-conditions: Người dùng đã đăng nhập vào hệ thống.
+- Post-conditions: Ngôn ngữ của giao diện được thay đổi theo lựa chọn của người dùng.
+- Flow of events: 
+- Basic flow (Thành công): 
+  1. Người dùng truy cập phần "Settings" và chọn mục "Language".
+  2. Người dùng chọn ngôn ngữ mong muốn từ danh sách các ngôn ngữ có sẵn.
+  3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
+- Alternative flow (Thất bại):
+  Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
+- Extension point:  
