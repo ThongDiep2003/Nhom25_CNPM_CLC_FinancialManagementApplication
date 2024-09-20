@@ -25,7 +25,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Hệ thống tạo mới tài khoản và lưu thông tin vào CSDL.
   5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang đăng nhập.
 - Alternative flow (Thất bại): 
-  Nếu người dùng nhập thiếu thông tin, trùng email hoặc mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
+  Nếu người dùng nhập thiếu thông tin, trùng email, mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
   1. Hệ thống mô tả lý do không thể tạo mới tài khoản.
   2. Hệ thống hiển thị lại biểu mẫu cho người dùng chỉnh sửa thông tin đăng ký.
   3. Người dùng nhập lại thông tin được yêu cầu, Basic Flow khi đó sẽ tiếp tục tại bước 1.
