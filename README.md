@@ -411,22 +411,20 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 9. Statistic.
 
-![image](https://github.com/user-attachments/assets/3eff8f03-6c76-4636-988e-86b1aea5383a)
+![image](https://github.com/user-attachments/assets/17b6f138-9285-44dc-89e7-596dc7c5341f)
+
 
 ## 10. Add Transaction.
 
-![image](https://github.com/user-attachments/assets/52ed2af6-8b39-4fd5-b5f5-763d1ffc1612)
-![image](https://github.com/user-attachments/assets/6f3cf0a1-0873-4742-a3a8-64b18eda6923)
+![image](https://github.com/user-attachments/assets/911f3afc-66ef-475a-8ed2-dead4bb54f13)
+![image](https://github.com/user-attachments/assets/a8dd63c8-6a73-427f-bf53-ce41b52be005)
+![image](https://github.com/user-attachments/assets/a7a4cf84-2ea9-4f46-a751-cdf53b84a8b3)
+![image](https://github.com/user-attachments/assets/ef618c27-8b24-4194-82a7-53807de4bb1d)
 
-![image](https://github.com/user-attachments/assets/a186c546-3aab-49c5-a9d3-689b770fd85c)
-![image](https://github.com/user-attachments/assets/d79bfcf9-271d-442a-86b2-6ff45aab8d97)
 
 ## 11. Transaction Budget.
 
-![image](https://github.com/user-attachments/assets/496dfe7a-aa01-40a8-85e7-99de238f2be5)
-![image](https://github.com/user-attachments/assets/b1dcf108-a508-49e6-b69d-80f31e5eaf2f)
-
-
+![image](https://github.com/user-attachments/assets/1a9a3e94-a780-4645-8df3-7beb7ea1824b)
 
 ## 12. Personal Budget.
 
