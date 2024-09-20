@@ -6,15 +6,15 @@ Nguyễn Hồng Thông Điệp – 21110166
 Ứng dụng quản lý tài chính.
 
 # III. Đặc tả use case:
-o	
+
 
 UC01. Register
 - Brief description: Khách (Guest)  truy cập và tạo tài khoản mới.
 - Actor: Guest.
 - Pre-conditions: Không. 
 - Post-conditions: 
-  o	Nếu đăng ký thành công: Người dùng được tạo mới tài khoản, thông tin cá nhân được lưu vào CSDL.
-  o	Nếu đăng ký không thành công: Thông báo không tạo được tài khoản, buộc người dùng nhập lại thông tin cho chính xác.
+  * Nếu đăng ký thành công: Người dùng được tạo mới tài khoản, thông tin cá nhân được lưu vào CSDL.
+  * Nếu đăng ký không thành công: Thông báo không tạo được tài khoản, buộc người dùng nhập lại thông tin cho chính xác.
 - Flow of events: 
 - Basic flow (Thành công): 
   Use case bắt đầu khi khách truy cập vào trang tạo tài khoản.
