@@ -423,29 +423,34 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 11. Transaction Budget.
 
-![image](https://github.com/user-attachments/assets/6c81e359-6604-42b7-b27e-05dcb7ef786e)
-![image](https://github.com/user-attachments/assets/ee83f1d2-c27c-4386-823d-3cafab755589)
+![image](https://github.com/user-attachments/assets/496dfe7a-aa01-40a8-85e7-99de238f2be5)
+![image](https://github.com/user-attachments/assets/b1dcf108-a508-49e6-b69d-80f31e5eaf2f)
+
 
 
 ## 12. Personal Budget.
 
-![image](https://github.com/user-attachments/assets/b956f79c-c104-46ce-9176-beb2f9b3ba00)
+![image](https://github.com/user-attachments/assets/2fc2dba1-e646-4dd2-b974-96cc25f17f34)
+
 
 ## 13. Goal.
 
-![image](https://github.com/user-attachments/assets/3ded84e4-ed0d-42ff-8f0a-c724d0ee8c7a)
+![image](https://github.com/user-attachments/assets/5748aea8-b130-4256-a065-3009674f61c3)
+
 
 ## 14. Setting.
 
-![image](https://github.com/user-attachments/assets/074bafbf-1251-4706-b7ef-996f55a26a1f)
+![image](https://github.com/user-attachments/assets/91dd3138-df7a-446d-ab99-9d3aaa419792)
+
 
 ## 15. Profile.
 
-![image](https://github.com/user-attachments/assets/125f6522-f120-4e38-b3fc-f93538c9d449)
+![Profile](https://github.com/user-attachments/assets/d6a0895e-8aa3-4a7a-a551-dc3ad0426efe)
 
 ## 16. Edit Profile.
 
-![image](https://github.com/user-attachments/assets/581b7aa7-83c8-471b-85e3-fa401f627027)
+![image](https://github.com/user-attachments/assets/a88ca2d0-a272-40c9-91f9-17f2725ba24b)
+
 
 ## 17. Add New Card.
 
