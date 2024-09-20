@@ -45,14 +45,16 @@ Nguyễn Hồng Thông Điệp – 21110166
   * Sau khi đăng nhập: người dùng được xác thực và vào trang được chỉ định tùy theo từng chức vụ.
   * Đăng nhập thất bại: thông báo lỗi đăng nhập và yêu cầu đăng nhập lại.
 - Flow of events: 
-  * Basic flow (Thành công): 
+  * Basic flow (Thành công):
+    
   Use case được kích hoạt khi người dùng cần đăng nhập vào hệ thống hoặc xác thực danh tính để sử dụng các chức năng của hệ thống:
 <br><br>
   1. Người dùng nhập tài khoản và mật khẩu vào các ô input và bấm "Login".
   2. Hệ thống kiểm tra input và xác thực.
   3. Hệ thống thông báo xác thực thành công.
 <br><br>
-  * Alternative flow (Thất bại): 
+  * Alternative flow (Thất bại):
+    
   Khi xác thực thất bại hoặc xảy ra lỗi: hệ thống thông báo lỗi sai.
 - Extension point:
 
@@ -89,6 +91,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   8. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
   * Alternative flow (Thất bại):
+    
   Đặt lại mật khẩu thất bại.
 <br><br>
   1. Hệ thống kiểm tra email thất bại.
@@ -113,6 +116,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   5. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
   * Alternative flow (Thất bại):
+  
   Đổi mật khẩu thất bại.
 <br><br>
   1. Hệ thống kiểm tra thấy mật khẩu hiện tại không trùng khớp.
@@ -155,6 +159,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Hệ thống thông báo thêm giao dịch thành công.
 <br><br>
   * Alternative flow (Thất bại):
+  
   Thêm giao dịch thất bại khi người dùng điền thông tin giao dịch sai định dạng.
 <br><br>
   1. Hệ thống kiểm tra thông tin giao dịch mới.
@@ -178,6 +183,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   5. Hệ thống xóa giao dịch khỏi cơ sở dữ liệu và cập nhật danh sách giao dịch.
 <br><br>
   * Alternative flow (Thất bại):
+  
   Nếu có lỗi xảy ra khi xóa giao dịch, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:
 
@@ -195,6 +201,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
 <br><br>
   * Alternative flow (Thất bại):
+  
   Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
 - Extension point:  
 
@@ -211,5 +218,6 @@ Nguyễn Hồng Thông Điệp – 21110166
   3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
 <br><br>
   * Alternative flow (Thất bại):
+  
   Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:  
