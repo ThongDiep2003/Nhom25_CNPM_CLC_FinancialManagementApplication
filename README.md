@@ -171,7 +171,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 ## UC08. Xóa giao dịch.
 - Brief description: Người dùng xóa một giao dịch đã tồn tại khỏi danh sách giao dịch của mình.
 - Actor: User.
-- Pre-conditions: Người dùng đã có các giao dịch trong hệ thống.
+- Pre-conditions: Actors đã có các giao dịch trong hệ thống.
 - Post-conditions: Giao dịch được xóa khỏi cơ sở dữ liệu và không còn xuất hiện trong danh sách giao dịch.
 - Flow of events: 
   * Basic flow (Thành công):
@@ -190,7 +190,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 ## UC09. Chỉnh sửa giao dịch.
 - Brief description: Người dùng chỉnh sửa thông tin của một giao dịch đã tồn tại trong danh sách giao dịch.
 - Actor: User.
-- Pre-conditions: Người dùng đã có các giao dịch được ghi nhận.
+- Pre-conditions: Actors đã có các giao dịch được ghi nhận.
 - Post-conditions: Thông tin giao dịch được cập nhật trong cơ sở dữ liệu.
 - Flow of events: 
   * Basic flow (Thành công):
@@ -208,7 +208,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 ## UC10. Chọn ngôn ngữ.
 - Brief description: Người dùng thay đổi ngôn ngữ giao diện của ứng dụng.
 - Actor: User.
-- Pre-conditions: Người dùng đã đăng nhập vào hệ thống.
+- Pre-conditions: Actors đã đăng nhập vào hệ thống.
 - Post-conditions: Ngôn ngữ của giao diện được thay đổi theo lựa chọn của người dùng.
 - Flow of events: 
   * Basic flow (Thành công):
@@ -221,3 +221,120 @@ Nguyễn Hồng Thông Điệp – 21110166
   
   Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:  
+
+## UC11. Xem chi tiết chi tiêu.
+- Brief description: Hiển thị chi tiết các khoản chi tiêu của người dùng trong Budget.
+- Actor: User.
+- Pre-conditions: Actors đã thực hiện các giao dịch chi tiêu.
+- Post-conditions: Các khoản chi tiêu được hiển thị.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng truy cập danh sách chi tiêu trong phần Budget.
+  2. Hệ thống hiển thị các khoản chi tiêu theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+  Nếu không có giao dịch chi tiêu, hệ thống hiển thị thông báo không có chi tiêu nào.
+- Extension point:
+
+  ## UC12. Tạo mục tiêu tài chính.
+- Brief description: Người dùng tạo các mục tiêu tài mới chính trong phần Budget.
+- Actor: User.
+- Pre-conditions: Actors đã đăng nhập thành công vào hệ thống.
+- Post-conditions: Mục tiêu được tạo thành công và hiển thị.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
+  2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+  3. Người dùng Bấm "Add new".
+  4. Người dùng nhập và chọn thông tin của mục tiêu, sau đó bấm "Add".
+  5. Hệ thống thông báo thêm thành công và hiển thị mục tiêu tài chính vừa tạo.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+  Nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
+<br><br>
+  1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
+  2. Người dùng nhập lại thông tin mới.
+    <br><br>
+  Use case quay trở lại bước 4.
+- Extension point:
+
+   ## UC13. Sửa mục tiêu tài chính.
+- Brief description: Người dùng sửa các mục tiêu tài chính trong phần Budget.
+- Actor: User.
+- Pre-conditions: Actors đã có các mục tiêu tài chính.
+- Post-conditions: Cập nhật thành công mục tiêu tài chính.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
+  2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+  3. Người dùng bấm vào mục tiêu cần sửa đổi.
+  4. Người dùng nhập và chọn thông tin của mục tiêu, sau đó bấm "Change".
+  5. Hệ thống thông báo sửa thành công, cập nhật và hiển thị mục tiêu tài chính vừa sửa đổi.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+  Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào, nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
+<br><br>
+  1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
+  2. Người dùng nhập lại thông tin mới
+   <br><br>
+  Use case quay trở lại bước 4.
+- Extension point:
+
+   ## UC14. Xóa mục tiêu tài chính.
+- Brief description: Người dùng sửa các mục tiêu tài chính trong phần Budget.
+- Actor: User.
+- Pre-conditions: Actors đã có các mục tiêu tài chính.
+- Post-conditions: Cập nhật thành công mục tiêu tài chính.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
+  2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+  3. Người dùng bấm vào mục tiêu cần xóa.
+  4. Người dùng chọn "Delete".
+  5. Hệ thống thông báo xóa thành công và cập nhật.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+  Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào.
+- Extension point:
+
+   ## UC15. Tìm kiếm.
+- Brief description: Người dùng có thể thực hiện tìm kiếm Transaction.
+- Actor: User.
+- Pre-conditions: Actors đã có các giao dịch.
+- Post-conditions: Tìm được các giao dịch.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng bấm vào nút tìm kiếm trong phần Transaction.
+  2. Người dùng nhập thông tin tìm kiếm
+  3. Hệ thống hiển thị kết quả tìm kiếm.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+ Hệ thống không tìm thấy Transaction khi người dùng nhập sai thông tin tìm kiếm hoặc Transaction không tồn tại.
+- Extension point:
+
+## UC16. Lọc.
+- Brief description: Người dùng có thể thực hiện lọc tìm Transaction.
+- Actor: User.
+- Pre-conditions: Actors đã có các giao dịch.
+- Post-conditions: Tìm được các giao dịch.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng bấm vào nút lọc trong phần Transaction.
+  2. Người dùng chọn tiêu chí lọc.
+  3. Hệ thống hiển thị kết quả lọc.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+ Hệ thống không tìm thấy Transaction khi Transaction không tồn tại.
+- Extension point:
