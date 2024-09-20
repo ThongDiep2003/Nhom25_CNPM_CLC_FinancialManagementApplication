@@ -55,7 +55,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
     
-     Khi xác thực thất bại hoặc xảy ra lỗi: hệ thống thông báo lỗi sai.
+    Khi xác thực thất bại hoặc xảy ra lỗi: hệ thống thông báo lỗi sai.
 - Extension point:
 
 ## UC03. Đăng xuất.
@@ -92,13 +92,13 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
     
-     Đặt lại mật khẩu thất bại.
+    Đặt lại mật khẩu thất bại.
 <br><br>
   1. Hệ thống kiểm tra email thất bại.
   2. Hệ thống hiện thông báo lỗi.
   3. Người dùng nhập lại email.
 <br><br>
-     Use Case quay lại bước 3 của Basic flow.
+    Use Case quay lại bước 3 của Basic flow.
 - Extension point:
 
 ## UC05. Đổi mật khẩu.
@@ -117,13 +117,13 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-  Đổi mật khẩu thất bại.
+    Đổi mật khẩu thất bại.
 <br><br>
   1. Hệ thống kiểm tra thấy mật khẩu hiện tại không trùng khớp.
   2. Hệ thống hiện thông báo lỗi
   3. Người dùng nhập lại mật khẩu.
 <br><br>
-     Use Case quay lại bước 3 của Basic flow
+    Use Case quay lại bước 3 của Basic flow
 - Extension point:
 
 ## UC06. Thống kê.
@@ -160,12 +160,12 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Thêm giao dịch thất bại khi người dùng điền thông tin giao dịch sai định dạng.
+    Thêm giao dịch thất bại khi người dùng điền thông tin giao dịch sai định dạng.
 <br><br>
   1. Hệ thống kiểm tra thông tin giao dịch mới.
   2. Hệ thống thông báo thông tin giao dịch không hợp lệ và yêu cầu người dùng điền lại.
 <br><br>
-     Use case quay lại bước 2 Basic flow.
+    Use case quay lại bước 2 Basic flow.
 - Extension point:
 
 ## UC08. Xóa giao dịch.
@@ -184,7 +184,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu có lỗi xảy ra khi xóa giao dịch, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
+    Nếu có lỗi xảy ra khi xóa giao dịch, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:
 
 ## UC09. Chỉnh sửa giao dịch.
@@ -202,7 +202,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
+    Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
 - Extension point:  
 
 ## UC10. Chọn ngôn ngữ.
@@ -219,7 +219,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
+    Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:  
 
 ## UC11. Xem chi tiết chi tiêu.
@@ -235,7 +235,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu không có giao dịch chi tiêu, hệ thống hiển thị thông báo không có chi tiêu nào.
+    Nếu không có giao dịch chi tiêu, hệ thống hiển thị thông báo không có chi tiêu nào.
 - Extension point:
 
   ## UC12. Tạo mục tiêu tài chính.
@@ -254,12 +254,12 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
+    Nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
 <br><br>
   1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
   2. Người dùng nhập lại thông tin mới.
     <br><br>
-  Use case quay trở lại bước 4.
+    Use case quay trở lại bước 4.
 - Extension point:
 
    ## UC13. Sửa mục tiêu tài chính.
@@ -278,7 +278,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào,   nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
+    Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào,   nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
 <br><br>
   1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
   2. Người dùng nhập lại thông tin mới
@@ -302,7 +302,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 <br><br>
   * Alternative flow (Thất bại):
   
-     Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào.
+    Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào.
 - Extension point:
 
    ## UC15. Tìm kiếm.
@@ -339,7 +339,7 @@ Nguyễn Hồng Thông Điệp – 21110166
     Hệ thống không tìm thấy Transaction khi Transaction không tồn tại.
 - Extension point:
 
-## UC16. Chỉnh sửa thông tin cá nhân.
+## UC17. Chỉnh sửa thông tin cá nhân.
 - Brief description: Người dùng có chỉnh sửa thông tin cá nhân của mình.
 - Actor: User.
 - Pre-conditions: Actors đã đăng nhập thành công.
