@@ -18,6 +18,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   * Nếu đăng ký không thành công: Thông báo không tạo được tài khoản, buộc người dùng nhập lại thông tin cho chính xác.
 - Flow of events: 
   * Basic flow (Thành công):
+    
   Use case bắt đầu khi khách truy cập vào trang Register.
 <br><br>
   1. Khách điền vào các thông tin mà hệ thống yêu cầu và nhấn "Register".
@@ -26,7 +27,8 @@ Nguyễn Hồng Thông Điệp – 21110166
   4. Hệ thống tạo mới tài khoản và lưu thông tin vào cơ sở dữ liệu.
   5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang Login.
 <br><br>
-  * Alternative flow (Thất bại): 
+  * Alternative flow (Thất bại):
+    
   Nếu người dùng nhập thiếu thông tin, trùng email, mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
 <br><br>
   1. Hệ thống mô tả lý do không thể tạo mới tài khoản.
