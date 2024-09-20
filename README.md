@@ -338,3 +338,20 @@ Nguyễn Hồng Thông Điệp – 21110166
   
  Hệ thống không tìm thấy Transaction khi Transaction không tồn tại.
 - Extension point:
+
+## UC16. Chỉnh sửa thông tin cá nhân.
+- Brief description: Người dùng có chỉnh sửa thông tin cá nhân của mình.
+- Actor: User.
+- Pre-conditions: Actors đã đăng nhập thành công.
+- Post-conditions: Thông tin người dùng đã được chỉnh sửa và cập nhật.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng bấm vào Setting, chọn Profile và nhấn vào "Edit".
+  2. Người dùng nhập thông tin mới và bấm "Confim".
+  3. Hệ thống cập nhật và hiển thị thông tin mới.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+ Hệ thống không thể lưu thông tin và báo lỗi khi người dùng nhập thông tin sai định dạng.
+- Extension point:
