@@ -456,7 +456,8 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 18. Change Langue.
 
-![image](https://github.com/user-attachments/assets/d72fb651-6877-4a78-b300-365e43325d5e)
+![image](https://github.com/user-attachments/assets/66140c9f-8f06-4808-8333-86f201e8fd07)
+
 
 ## 19. Change Password.
 
@@ -465,7 +466,8 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 20. Term & Condition.
 
-![image](https://github.com/user-attachments/assets/6742b039-b1d0-4051-b01f-5811e0d56e76)
+![image](https://github.com/user-attachments/assets/c71818e4-92cd-4871-9492-814db0c1133e)
+
 
 
 
