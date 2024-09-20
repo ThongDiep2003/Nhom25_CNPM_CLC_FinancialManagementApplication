@@ -355,3 +355,18 @@ Nguyễn Hồng Thông Điệp – 21110166
   
     Hệ thống không thể lưu thông tin và báo lỗi khi người dùng nhập thông tin sai định dạng.
 - Extension point:
+
+# IV. Hình ảnh các giao diện: 
+##1. Login.
+
+![image](https://github.com/user-attachments/assets/9906c24c-9a2b-4c13-94a2-e7759893caa8)
+
+##2. Signup.
+
+![image](https://github.com/user-attachments/assets/c6a52463-93ad-4124-8feb-8f69dcc73326)
+![image](https://github.com/user-attachments/assets/102e7382-1bae-4c19-8a9c-2a2072cfa185)
+
+
+
+
+
