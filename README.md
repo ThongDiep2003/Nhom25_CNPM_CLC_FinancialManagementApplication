@@ -8,7 +8,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 # III. Đặc tả use case:
 
 
-- # UC01. Register
+## UC01. Register
 - Brief description: Khách (Guest)  truy cập và tạo tài khoản mới.
 - Actor: Guest.
 - Pre-conditions: Không. 
