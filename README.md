@@ -449,9 +449,9 @@ Nguyễn Hồng Thông Điệp – 21110166
 
 ## 17. Add New Card.
 
-![Add New Card](https://github.com/user-attachments/assets/8fc9bd34-d96b-47a5-8464-dff21d7183b0)
-![Add New Card-1](https://github.com/user-attachments/assets/d07c4c8b-14e2-4b83-8309-ee4740d4a215)
-![Add New Card-2](https://github.com/user-attachments/assets/1ea6c9ab-3752-4aea-945c-ebab7eeab1e2)
+![image](https://github.com/user-attachments/assets/d18143a6-3a79-41c5-8e36-805848b509c0)
+![image](https://github.com/user-attachments/assets/05d9fbc5-2250-4f59-985c-91a5e0b12bef)
+![image](https://github.com/user-attachments/assets/9f8c4b27-cda2-4d0f-b8d4-a4750a9e3cea)
 
 
 ## 18. Change Langue.
