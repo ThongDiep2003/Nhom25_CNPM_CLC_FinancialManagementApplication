@@ -21,19 +21,19 @@ Nguyễn Hồng Thông Điệp – 21110166
     
      Use case bắt đầu khi khách truy cập vào trang Register.
 <br><br>
-  1. Khách điền vào các thông tin mà hệ thống yêu cầu và nhấn "Register".
-  2. Khách tiến hành xác thực OTP.
-  3. Hệ thống xác thực thông tin theo quy định.
-  4. Hệ thống tạo mới tài khoản và lưu thông tin vào cơ sở dữ liệu.
-  5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang Login.
+ 1. Khách điền vào các thông tin mà hệ thống yêu cầu và nhấn "Register".
+ 2. Khách tiến hành xác thực OTP.
+ 3. Hệ thống xác thực thông tin theo quy định.
+ 4. Hệ thống tạo mới tài khoản và lưu thông tin vào cơ sở dữ liệu.
+ 5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang Login.
 <br><br>
   * Alternative flow (Thất bại):
     
     Nếu người dùng nhập thiếu thông tin, trùng email, mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
 <br><br>
-  1. Hệ thống mô tả lý do không thể tạo mới tài khoản.
-  2. Hệ thống hiển thị lại biểu mẫu cho người dùng chỉnh sửa thông tin đăng ký.
-  3. Người dùng nhập lại thông tin được yêu cầu, Basic Flow khi đó sẽ tiếp tục tại bước 1.
+ 1. Hệ thống mô tả lý do không thể tạo mới tài khoản.
+ 2. Hệ thống hiển thị lại biểu mẫu cho người dùng chỉnh sửa thông tin đăng ký.
+ 3. Người dùng nhập lại thông tin được yêu cầu, Basic Flow khi đó sẽ tiếp tục tại bước 1.
 <br><br>
 - Extension point:
 
@@ -49,9 +49,9 @@ Nguyễn Hồng Thông Điệp – 21110166
     
     Use case được kích hoạt khi người dùng cần đăng nhập vào hệ thống hoặc xác thực danh tính để sử dụng các chức năng của hệ thống:
 <br><br>
-  1. Người dùng nhập tài khoản và mật khẩu vào các ô input và bấm "Login".
-  2. Hệ thống kiểm tra input và xác thực.
-  3. Hệ thống thông báo xác thực thành công.
+ 1. Người dùng nhập tài khoản và mật khẩu vào các ô input và bấm "Login".
+ 2. Hệ thống kiểm tra input và xác thực.
+ 3. Hệ thống thông báo xác thực thành công.
 <br><br>
   * Alternative flow (Thất bại):
     
@@ -66,9 +66,9 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng bấm vào nút "Logout" ở trang Setting.
-  2. Hệ thống thực hiện đăng xuất cho người dùng.
-  3. Chuyển qua trang đăng nhập.
+ 1. Người dùng bấm vào nút "Logout" ở trang Setting.
+ 2. Hệ thống thực hiện đăng xuất cho người dùng.
+ 3. Chuyển qua trang đăng nhập.
 <br><br>
   * Alternative flow (Thất bại):
 - Extension point:
@@ -81,22 +81,22 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng chọn "Forgot Password" ở trang Login.
-  2. Hệ thống hiển thị trang ForgotPassword .
-  3. Người dùng nhập email của mình và chọn nút “Reset Password”.
-  4. Hệ thống kiểm tra email và gửi mail đặt lại mật khẩu đến email của người dùng.
-  5. Người dùng mở mail đặt lại mật khẩu và chọn nút đặt lại mật khẩu.
-  6. Người dùng được chuyển đến trang đặt lại mật khẩu.
-  7. Người dùng nhập mật khẩu mới và chọn “Reset”.
-  8. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
+ 1. Người dùng chọn "Forgot Password" ở trang Login.
+ 2. Hệ thống hiển thị trang ForgotPassword .
+ 3. Người dùng nhập email của mình và chọn nút “Reset Password”.
+ 4. Hệ thống kiểm tra email và gửi mail đặt lại mật khẩu đến email của người dùng.
+ 5. Người dùng mở mail đặt lại mật khẩu và chọn nút đặt lại mật khẩu.
+ 6. Người dùng được chuyển đến trang đặt lại mật khẩu.
+ 7. Người dùng nhập mật khẩu mới và chọn “Reset”.
+ 8. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
   * Alternative flow (Thất bại):
     
     Đặt lại mật khẩu thất bại.
 <br><br>
-  1. Hệ thống kiểm tra email thất bại.
-  2. Hệ thống hiện thông báo lỗi.
-  3. Người dùng nhập lại email.
+ 1. Hệ thống kiểm tra email thất bại.
+ 2. Hệ thống hiện thông báo lỗi.
+ 3. Người dùng nhập lại email.
 <br><br>
     Use Case quay lại bước 3 của Basic flow.
 - Extension point:
@@ -109,19 +109,19 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng chọn "Change Password" ở trang Setting.
-  2. Hệ thống hiển thị trang ChangePassword .
-  3. Người dùng nhập mật khẩu hiện tại và mật khẩu mới, sau đó bấm "Comfirm".
-  4. Hệ thống kiểm tra mật khẩu hiện tại của người dùng, nếu đúng thì sẽ đặt lại mật khẩu.
-  5. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
+ 1. Người dùng chọn "Change Password" ở trang Setting.
+ 2. Hệ thống hiển thị trang ChangePassword .
+ 3. Người dùng nhập mật khẩu hiện tại và mật khẩu mới, sau đó bấm "Comfirm".
+ 4. Hệ thống kiểm tra mật khẩu hiện tại của người dùng, nếu đúng thì sẽ đặt lại mật khẩu.
+ 5. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
   * Alternative flow (Thất bại):
   
     Đổi mật khẩu thất bại.
 <br><br>
-  1. Hệ thống kiểm tra thấy mật khẩu hiện tại không trùng khớp.
-  2. Hệ thống hiện thông báo lỗi
-  3. Người dùng nhập lại mật khẩu.
+ 1. Hệ thống kiểm tra thấy mật khẩu hiện tại không trùng khớp.
+ 2. Hệ thống hiện thông báo lỗi
+ 3. Người dùng nhập lại mật khẩu.
 <br><br>
     Use Case quay lại bước 3 của Basic flow
 - Extension point:
@@ -134,11 +134,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
 <br><br>
   * Alternative flow (Thất bại):
   <br><br>
-  1. 
+ 1. 
 <br><br>
     
 - Extension point:
@@ -151,9 +151,9 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập phần "Settings" và chọn mục "Language".
-  2. Người dùng chọn ngôn ngữ mong muốn từ danh sách các ngôn ngữ có sẵn.
-  3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
+ 1. Người dùng truy cập phần "Settings" và chọn mục "Language".
+ 2. Người dùng chọn ngôn ngữ mong muốn từ danh sách các ngôn ngữ có sẵn.
+ 3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -168,9 +168,9 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng bấm vào Setting, chọn Profile và nhấn vào "Edit".
-  2. Người dùng nhập thông tin mới và bấm "Confim".
-  3. Hệ thống cập nhật và hiển thị thông tin mới.
+ 1. Người dùng bấm vào Setting, chọn Profile và nhấn vào "Edit".
+ 2. Người dùng nhập thông tin mới và bấm "Confim".
+ 3. Hệ thống cập nhật và hiển thị thông tin mới.
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -185,11 +185,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
 <br><br>
   * Alternative flow (Thất bại):
   <br><br>
-  1. 
+ 1. 
 <br><br>
     
 - Extension point:
@@ -202,11 +202,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
 <br><br>
   * Alternative flow (Thất bại):
   <br><br>
-  1. 
+ 1. 
 <br><br>
     
 - Extension point:
@@ -219,17 +219,17 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng chọn "Add Transaction".
-  2. Người dùng điền và chọn các thông tin giao dịch, sau đó bấm "Add".
-  3. Hệ thống xác nhật và cập nhật vào dữ liệu của người dùng.
-  4. Hệ thống thông báo thêm giao dịch thành công.
+ 1. Người dùng chọn "Add Transaction".
+ 2. Người dùng điền và chọn các thông tin giao dịch, sau đó bấm "Add".
+ 3. Hệ thống xác nhật và cập nhật vào dữ liệu của người dùng.
+ 4. Hệ thống thông báo thêm giao dịch thành công.
 <br><br>
   * Alternative flow (Thất bại):
   
     Thêm giao dịch thất bại khi người dùng điền thông tin giao dịch sai định dạng.
 <br><br>
-  1. Hệ thống kiểm tra thông tin giao dịch mới.
-  2. Hệ thống thông báo thông tin giao dịch không hợp lệ và yêu cầu người dùng điền lại.
+ 1. Hệ thống kiểm tra thông tin giao dịch mới.
+ 2. Hệ thống thông báo thông tin giao dịch không hợp lệ và yêu cầu người dùng điền lại.
 <br><br>
     Use case quay lại bước 2 Basic flow.
 - Extension point:
@@ -242,7 +242,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -256,10 +256,10 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch cụ thể.
-  2. Hệ thống sẽ dẫn người dùng vào trang Detail Transaction có chứa nút Edit.
-  3. Người dùng, nhấn nút Edit để chuyển sang trang thay đổi thông tin giao dịch (ví dụ: số tiền, ghi chú, loại giao dịch) rồi nhấn nút Confirm.
-  4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
+ 1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch cụ thể.
+ 2. Hệ thống sẽ dẫn người dùng vào trang Detail Transaction có chứa nút Edit.
+ 3. Người dùng, nhấn nút Edit để chuyển sang trang thay đổi thông tin giao dịch (ví dụ: số tiền, ghi chú, loại giao dịch) rồi nhấn nút Confirm.
+ 4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -274,11 +274,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch.
-  2. Hệ thống sẽ hiển thị trang Detail Transaction, trong đó có chứa nút Delete Transaction.
-  3. Người dùng nhấn nút Delete, hệ thống sẽ hiện thông báo để xác thực yêu cầu của người dùng.
-  4. Người dùng nhấn nút Confirm để xác thực yêu cầu.
-  5. Hệ thống xóa giao dịch khỏi cơ sở dữ liệu và cập nhật danh sách giao dịch.
+ 1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch.
+ 2. Hệ thống sẽ hiển thị trang Detail Transaction, trong đó có chứa nút Delete Transaction.
+ 3. Người dùng nhấn nút Delete, hệ thống sẽ hiện thông báo để xác thực yêu cầu của người dùng.
+ 4. Người dùng nhấn nút Confirm để xác thực yêu cầu.
+ 5. Hệ thống xóa giao dịch khỏi cơ sở dữ liệu và cập nhật danh sách giao dịch.
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -293,13 +293,13 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng chọn "Statistic".
-  2. Hệ thống truy cập dữ liệu người dùng, thống kê thu nhập và chi tiêu của người dùng và hiển thị ra trang thống kê.
+ 1. Người dùng chọn "Statistic".
+ 2. Hệ thống truy cập dữ liệu người dùng, thống kê thu nhập và chi tiêu của người dùng và hiển thị ra trang thống kê.
 <br><br>
   * Alternative flow (Thất bại):
   <br><br>
-  1. Hệ thống kiểm tra thấy thông tin thu nhập và chi tiêu của người dùng không tồn tại.
-  2. Hệ thống thông báo người dùng không có thông tin thu nhập và chi tiêu.
+ 1. Hệ thống kiểm tra thấy thông tin thu nhập và chi tiêu của người dùng không tồn tại.
+ 2. Hệ thống thông báo người dùng không có thông tin thu nhập và chi tiêu.
 <br><br>
     
 - Extension point:
@@ -312,9 +312,9 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng bấm vào nút tìm kiếm trong phần Transaction.
-  2. Người dùng nhập thông tin tìm kiếm
-  3. Hệ thống hiển thị kết quả tìm kiếm.
+ 1. Người dùng bấm vào nút tìm kiếm trong phần Transaction.
+ 2. Người dùng nhập thông tin tìm kiếm
+ 3. Hệ thống hiển thị kết quả tìm kiếm.
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -329,9 +329,9 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng bấm vào nút lọc trong phần Transaction.
-  2. Người dùng chọn tiêu chí lọc.
-  3. Hệ thống hiển thị kết quả lọc.
+ 1. Người dùng bấm vào nút lọc trong phần Transaction.
+ 2. Người dùng chọn tiêu chí lọc.
+ 3. Hệ thống hiển thị kết quả lọc.
 <br><br>
   * Alternative flow (Thất bại):
   
@@ -346,7 +346,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
   * Alternative flow (Thất bại):
   
 - Extension point:
@@ -359,7 +359,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
   * Alternative flow (Thất bại):
   
 - Extension point:
@@ -372,7 +372,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
   * Alternative flow (Thất bại):
   
 - Extension point:
@@ -385,7 +385,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
   * Alternative flow (Thất bại):
   
 - Extension point:
@@ -398,18 +398,18 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
-  2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
-  3. Người dùng Bấm "Add new".
-  4. Người dùng nhập và chọn thông tin của mục tiêu, sau đó bấm "Add".
-  5. Hệ thống thông báo thêm thành công và hiển thị mục tiêu tài chính vừa tạo.
+ 1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
+ 2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+ 3. Người dùng Bấm "Add new".
+ 4. Người dùng nhập và chọn thông tin của mục tiêu, sau đó bấm "Add".
+ 5. Hệ thống thông báo thêm thành công và hiển thị mục tiêu tài chính vừa tạo.
 <br><br>
   * Alternative flow (Thất bại):
   
     Nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
 <br><br>
-  1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
-  2. Người dùng nhập lại thông tin mới.
+ 1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
+ 2. Người dùng nhập lại thông tin mới.
     <br><br>
     Use case quay trở lại bước 4.
 - Extension point:
@@ -422,7 +422,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. 
+ 1. 
   * Alternative flow (Thất bại):
   
 - Extension point:
@@ -435,18 +435,18 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
-  2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
-  3. Người dùng bấm vào mục tiêu cần sửa đổi.
-  4. Người dùng nhập và chọn thông tin của mục tiêu, sau đó bấm "Change".
-  5. Hệ thống thông báo sửa thành công, cập nhật và hiển thị mục tiêu tài chính vừa sửa đổi.
+ 1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
+ 2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+ 3. Người dùng bấm vào mục tiêu cần sửa đổi.
+ 4. Người dùng nhập và chọn thông tin của mục tiêu, sau đó bấm "Change".
+ 5. Hệ thống thông báo sửa thành công, cập nhật và hiển thị mục tiêu tài chính vừa sửa đổi.
 <br><br>
   * Alternative flow (Thất bại):
   
     Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào,   nếu người dùng nhập các ký tự lạ, định dạng sai thì sẽ không tạo được mục tiêu mới.
 <br><br>
-  1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
-  2. Người dùng nhập lại thông tin mới
+ 1. Hệ thống sẽ thông báo thông tin mục tiêu không phù hợp.
+ 2. Người dùng nhập lại thông tin mới
    <br><br>
      Use case quay trở lại bước 4.
 - Extension point:
@@ -459,11 +459,11 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
-  2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
-  3. Người dùng bấm vào mục tiêu cần xóa.
-  4. Người dùng chọn "Delete".
-  5. Hệ thống thông báo xóa thành công và cập nhật.
+ 1. Người dùng truy cập mục tiêu tài chính trong phần Budget.
+ 2. Hệ thống hiển thị các mục tiêu tài chính theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
+ 3. Người dùng bấm vào mục tiêu cần xóa.
+ 4. Người dùng chọn "Delete".
+ 5. Hệ thống thông báo xóa thành công và cập nhật.
 <br><br>
   * Alternative flow (Thất bại):
   
