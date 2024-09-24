@@ -126,26 +126,92 @@ Nguyễn Hồng Thông Điệp – 21110166
     Use Case quay lại bước 3 của Basic flow
 - Extension point:
 
-## UC06. Thống kê.
-- Brief description: Giúp người dùng thống kê thu nhập và chi tiêu theo từng thời điểm.
-- Actor: User.
-- Pre-conditions: Actors đã có tài khoản trong hệ thống và đã đăng nhập thành công vào hệ thống.
-- Post-conditions: Hệ thống hiển thị thống kê của người dùng.
+## UC06. Xác nhận OTP.
+- Brief description:
+- Actor: 
+- Pre-conditions: 
+- Post-conditions: 
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng chọn "Statistic".
-  2. Hệ thống truy cập dữ liệu người dùng, thống kê thu nhập và chi tiêu của người dùng và hiển thị ra trang thống kê.
+  1. 
 <br><br>
   * Alternative flow (Thất bại):
   <br><br>
-  1. Hệ thống kiểm tra thấy thông tin thu nhập và chi tiêu của người dùng không tồn tại.
-  2. Hệ thống thông báo người dùng không có thông tin thu nhập và chi tiêu.
+  1. 
 <br><br>
     
 - Extension point:
 
-## UC07. Thêm giao dịch mới.
+## UC07. Chọn ngôn ngữ.
+- Brief description: Người dùng thay đổi ngôn ngữ giao diện của ứng dụng.
+- Actor: User.
+- Pre-conditions: Actors đã đăng nhập vào hệ thống.
+- Post-conditions: Ngôn ngữ của giao diện được thay đổi theo lựa chọn của người dùng.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng truy cập phần "Settings" và chọn mục "Language".
+  2. Người dùng chọn ngôn ngữ mong muốn từ danh sách các ngôn ngữ có sẵn.
+  3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+    Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
+- Extension point:  
+
+## UC08. Chỉnh sửa thông tin cá nhân.
+- Brief description: Người dùng có chỉnh sửa thông tin cá nhân của mình.
+- Actor: User.
+- Pre-conditions: Actors đã đăng nhập thành công.
+- Post-conditions: Thông tin người dùng đã được chỉnh sửa và cập nhật.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng bấm vào Setting, chọn Profile và nhấn vào "Edit".
+  2. Người dùng nhập thông tin mới và bấm "Confim".
+  3. Hệ thống cập nhật và hiển thị thông tin mới.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+    Hệ thống không thể lưu thông tin và báo lỗi khi người dùng nhập thông tin sai định dạng.
+- Extension point:
+
+## UC09. Thêm thẻ.
+- Brief description:
+- Actor: 
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+<br><br>
+  * Alternative flow (Thất bại):
+  <br><br>
+  1. 
+<br><br>
+    
+- Extension point:
+
+## UC10. Xóa thẻ.
+- Brief description:
+- Actor: 
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+<br><br>
+  * Alternative flow (Thất bại):
+  <br><br>
+  1. 
+<br><br>
+    
+- Extension point:
+
+## UC11. Tạo giao dịch mới.
 - Brief description: Giúp người dùng thêm thông tin giao dịch mới.
 - Actor: User.
 - Pre-conditions: Actors đã có tài khoản trong hệ thống và đã đăng nhập thành công vào hệ thống.
@@ -168,7 +234,39 @@ Nguyễn Hồng Thông Điệp – 21110166
     Use case quay lại bước 2 Basic flow.
 - Extension point:
 
-## UC08. Xóa giao dịch.
+## UC12. Chi tiết giao dịch.
+- Brief description: 
+- Actor: 
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+<br><br>
+  * Alternative flow (Thất bại):
+  
+- Extension point:  
+
+## UC13. Chỉnh sửa giao dịch.
+- Brief description: Người dùng chỉnh sửa thông tin của một giao dịch đã tồn tại trong danh sách giao dịch.
+- Actor: User.
+- Pre-conditions: Actors đã có các giao dịch được ghi nhận.
+- Post-conditions: Thông tin giao dịch được cập nhật trong cơ sở dữ liệu.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch cụ thể.
+  2. Hệ thống sẽ dẫn người dùng vào trang Detail Transaction có chứa nút Edit.
+  3. Người dùng, nhấn nút Edit để chuyển sang trang thay đổi thông tin giao dịch (ví dụ: số tiền, ghi chú, loại giao dịch) rồi nhấn nút Confirm.
+  4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+    Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
+- Extension point:  
+
+## UC14. Xóa giao dịch.
 - Brief description: Người dùng xóa một giao dịch đã tồn tại khỏi danh sách giao dịch của mình.
 - Actor: User.
 - Pre-conditions: Actors đã có các giao dịch trong hệ thống.
@@ -187,58 +285,112 @@ Nguyễn Hồng Thông Điệp – 21110166
     Nếu có lỗi xảy ra khi xóa giao dịch, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
 - Extension point:
 
-## UC09. Chỉnh sửa giao dịch.
-- Brief description: Người dùng chỉnh sửa thông tin của một giao dịch đã tồn tại trong danh sách giao dịch.
+## UC15. Thống kê giao dịch.
+- Brief description: Giúp người dùng thống kê thu nhập và chi tiêu theo từng thời điểm.
 - Actor: User.
-- Pre-conditions: Actors đã có các giao dịch được ghi nhận.
-- Post-conditions: Thông tin giao dịch được cập nhật trong cơ sở dữ liệu.
+- Pre-conditions: Actors đã có tài khoản trong hệ thống và đã đăng nhập thành công vào hệ thống.
+- Post-conditions: Hệ thống hiển thị thống kê của người dùng.
 - Flow of events: 
   * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập phần "Transactions List" và chọn một giao dịch cụ thể.
-  2. Hệ thống sẽ dẫn người dùng vào trang Detail Transaction có chứa nút Edit.
-  3. Người dùng, nhấn nút Edit để chuyển sang trang thay đổi thông tin giao dịch (ví dụ: số tiền, ghi chú, loại giao dịch) rồi nhấn nút Confirm.
-  4. Hệ thống xác thực và cập nhật thông tin giao dịch trong cơ sở dữ liệu.
+  1. Người dùng chọn "Statistic".
+  2. Hệ thống truy cập dữ liệu người dùng, thống kê thu nhập và chi tiêu của người dùng và hiển thị ra trang thống kê.
 <br><br>
   * Alternative flow (Thất bại):
-  
-    Nếu thông tin không hợp lệ, hệ thống thông báo lỗi và yêu cầu người dùng nhập lại thông tin chính xác.
-- Extension point:  
-
-## UC10. Chọn ngôn ngữ.
-- Brief description: Người dùng thay đổi ngôn ngữ giao diện của ứng dụng.
-- Actor: User.
-- Pre-conditions: Actors đã đăng nhập vào hệ thống.
-- Post-conditions: Ngôn ngữ của giao diện được thay đổi theo lựa chọn của người dùng.
-- Flow of events: 
-  * Basic flow (Thành công):
   <br><br>
-  1. Người dùng truy cập phần "Settings" và chọn mục "Language".
-  2. Người dùng chọn ngôn ngữ mong muốn từ danh sách các ngôn ngữ có sẵn.
-  3. Hệ thống cập nhật giao diện theo ngôn ngữ được chọn.
+  1. Hệ thống kiểm tra thấy thông tin thu nhập và chi tiêu của người dùng không tồn tại.
+  2. Hệ thống thông báo người dùng không có thông tin thu nhập và chi tiêu.
 <br><br>
-  * Alternative flow (Thất bại):
-  
-    Nếu ngôn ngữ không khả dụng hoặc có lỗi xảy ra khi thay đổi ngôn ngữ, hệ thống thông báo lỗi và yêu cầu người dùng thử lại.
-- Extension point:  
-
-## UC11. Xem chi tiết chi tiêu.
-- Brief description: Hiển thị chi tiết các khoản chi tiêu của người dùng trong Budget.
-- Actor: User.
-- Pre-conditions: Actors đã thực hiện các giao dịch chi tiêu.
-- Post-conditions: Các khoản chi tiêu được hiển thị.
-- Flow of events: 
-  * Basic flow (Thành công):
-  <br><br>
-  1. Người dùng truy cập danh sách chi tiêu trong phần Budget.
-  2. Hệ thống hiển thị các khoản chi tiêu theo từng danh mục, như ăn uống, mua sắm, giải trí và các biểu đồ thống kê xu hướng chi tiêu của người dùng.
-<br><br>
-  * Alternative flow (Thất bại):
-  
-    Nếu không có giao dịch chi tiêu, hệ thống hiển thị thông báo không có chi tiêu nào.
+    
 - Extension point:
 
-  ## UC12. Tạo mục tiêu tài chính.
+## UC16. Tìm kiếm giao dịch.
+- Brief description: Người dùng có thể thực hiện tìm kiếm Transaction.
+- Actor: User.
+- Pre-conditions: Actors đã có các giao dịch.
+- Post-conditions: Tìm được các giao dịch.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng bấm vào nút tìm kiếm trong phần Transaction.
+  2. Người dùng nhập thông tin tìm kiếm
+  3. Hệ thống hiển thị kết quả tìm kiếm.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+    Hệ thống không tìm thấy Transaction khi người dùng nhập sai thông tin tìm kiếm hoặc Transaction không tồn tại.
+- Extension point:
+
+## UC17. Lọc giao dịch.
+- Brief description: Người dùng có thể thực hiện lọc tìm Transaction.
+- Actor: User.
+- Pre-conditions: Actors đã có các giao dịch.
+- Post-conditions: Tìm được các giao dịch.
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. Người dùng bấm vào nút lọc trong phần Transaction.
+  2. Người dùng chọn tiêu chí lọc.
+  3. Hệ thống hiển thị kết quả lọc.
+<br><br>
+  * Alternative flow (Thất bại):
+  
+    Hệ thống không tìm thấy Transaction khi Transaction không tồn tại.
+- Extension point:
+
+## UC18. Tạo ngân sách mới.
+- Brief description:
+- Actor:
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+  * Alternative flow (Thất bại):
+  
+- Extension point:
+
+## UC19. Xem chi tiết ngân sách.
+- Brief description:
+- Actor:
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+  * Alternative flow (Thất bại):
+  
+- Extension point:
+
+## UC20. Chỉnh sửa ngân sách.
+- Brief description:
+- Actor:
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+  * Alternative flow (Thất bại):
+  
+- Extension point:
+
+## UC21. Xóa ngân sách.
+- Brief description:
+- Actor:
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+  * Alternative flow (Thất bại):
+  
+- Extension point:
+
+## UC22. Tạo mục tiêu mới.
 - Brief description: Người dùng tạo các mục tiêu tài mới chính trong phần Budget.
 - Actor: User.
 - Pre-conditions: Actors đã đăng nhập thành công vào hệ thống.
@@ -262,7 +414,20 @@ Nguyễn Hồng Thông Điệp – 21110166
     Use case quay trở lại bước 4.
 - Extension point:
 
-   ## UC13. Sửa mục tiêu tài chính.
+## UC23. Chi tiết mục tiêu.
+- Brief description:
+- Actor:
+- Pre-conditions: 
+- Post-conditions: 
+- Flow of events: 
+  * Basic flow (Thành công):
+  <br><br>
+  1. 
+  * Alternative flow (Thất bại):
+  
+- Extension point:
+
+## UC24. Sửa mục tiêu tài chính.
 - Brief description: Người dùng sửa các mục tiêu tài chính trong phần Budget.
 - Actor: User.
 - Pre-conditions: Actors đã có các mục tiêu tài chính.
@@ -286,7 +451,7 @@ Nguyễn Hồng Thông Điệp – 21110166
      Use case quay trở lại bước 4.
 - Extension point:
 
-   ## UC14. Xóa mục tiêu tài chính.
+## UC25. Xóa mục tiêu tài chính.
 - Brief description: Người dùng sửa các mục tiêu tài chính trong phần Budget.
 - Actor: User.
 - Pre-conditions: Actors đã có các mục tiêu tài chính.
@@ -305,56 +470,6 @@ Nguyễn Hồng Thông Điệp – 21110166
     Nếu không có giao mục tiêu tài chính, hệ thống hiển thị thông báo không có mục tiêu nào.
 - Extension point:
 
-   ## UC15. Tìm kiếm.
-- Brief description: Người dùng có thể thực hiện tìm kiếm Transaction.
-- Actor: User.
-- Pre-conditions: Actors đã có các giao dịch.
-- Post-conditions: Tìm được các giao dịch.
-- Flow of events: 
-  * Basic flow (Thành công):
-  <br><br>
-  1. Người dùng bấm vào nút tìm kiếm trong phần Transaction.
-  2. Người dùng nhập thông tin tìm kiếm
-  3. Hệ thống hiển thị kết quả tìm kiếm.
-<br><br>
-  * Alternative flow (Thất bại):
-  
-    Hệ thống không tìm thấy Transaction khi người dùng nhập sai thông tin tìm kiếm hoặc Transaction không tồn tại.
-- Extension point:
-
-## UC16. Lọc.
-- Brief description: Người dùng có thể thực hiện lọc tìm Transaction.
-- Actor: User.
-- Pre-conditions: Actors đã có các giao dịch.
-- Post-conditions: Tìm được các giao dịch.
-- Flow of events: 
-  * Basic flow (Thành công):
-  <br><br>
-  1. Người dùng bấm vào nút lọc trong phần Transaction.
-  2. Người dùng chọn tiêu chí lọc.
-  3. Hệ thống hiển thị kết quả lọc.
-<br><br>
-  * Alternative flow (Thất bại):
-  
-    Hệ thống không tìm thấy Transaction khi Transaction không tồn tại.
-- Extension point:
-
-## UC17. Chỉnh sửa thông tin cá nhân.
-- Brief description: Người dùng có chỉnh sửa thông tin cá nhân của mình.
-- Actor: User.
-- Pre-conditions: Actors đã đăng nhập thành công.
-- Post-conditions: Thông tin người dùng đã được chỉnh sửa và cập nhật.
-- Flow of events: 
-  * Basic flow (Thành công):
-  <br><br>
-  1. Người dùng bấm vào Setting, chọn Profile và nhấn vào "Edit".
-  2. Người dùng nhập thông tin mới và bấm "Confim".
-  3. Hệ thống cập nhật và hiển thị thông tin mới.
-<br><br>
-  * Alternative flow (Thất bại):
-  
-    Hệ thống không thể lưu thông tin và báo lỗi khi người dùng nhập thông tin sai định dạng.
-- Extension point:
 
 # IV. Hình ảnh các giao diện: 
 
