@@ -111,7 +111,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 
  1. Người dùng chọn "Change Password" ở trang Setting.
  2. Hệ thống hiển thị trang ChangePassword .
- 3. Người dùng nhập mật khẩu hiện tại và mật khẩu mới, sau đó bấm "Comfirm".
+ 3. Người dùng nhập mật khẩu hiện tại và mật khẩu mới, sau đó bấm "Confirm".
  4. Hệ thống kiểm tra mật khẩu hiện tại của người dùng, nếu đúng thì sẽ đặt lại mật khẩu.
  5. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 
