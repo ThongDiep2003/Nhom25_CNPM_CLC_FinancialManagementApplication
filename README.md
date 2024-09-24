@@ -17,7 +17,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   * Nếu đăng ký thành công: Người dùng được tạo mới tài khoản, thông tin cá nhân được lưu vào cơ sở dữ liệu.
   * Nếu đăng ký không thành công: Thông báo không tạo được tài khoản, buộc người dùng nhập lại thông tin cho chính xác.
 - Flow of events: 
-  * Basic flow (Thành công):
+- Basic flow (Thành công):
     
      Use case bắt đầu khi khách truy cập vào trang Register.
 <br><br>
@@ -27,7 +27,7 @@ Nguyễn Hồng Thông Điệp – 21110166
  4. Hệ thống tạo mới tài khoản và lưu thông tin vào cơ sở dữ liệu.
  5. Hệ thống thông báo tạo tài khoản thành công và chuyển đến trang Login.
 <br><br>
-  *  Alternative flow (Thất bại):
+- Alternative flow (Thất bại):
     
     Nếu người dùng nhập thiếu thông tin, trùng email, mật khẩu không đúng quy định hay nhập sai OTP  khi đó hệ thống sẽ:
 <br><br>
@@ -45,7 +45,7 @@ Nguyễn Hồng Thông Điệp – 21110166
   * Sau khi đăng nhập: người dùng được xác thực và vào trang được chỉ định tùy theo từng chức vụ.
   * Đăng nhập thất bại: thông báo lỗi đăng nhập và yêu cầu đăng nhập lại.
 - Flow of events: 
-  * Basic flow (Thành công):
+- Basic flow (Thành công):
     
     Use case được kích hoạt khi người dùng cần đăng nhập vào hệ thống hoặc xác thực danh tính để sử dụng các chức năng của hệ thống:
 <br><br>
@@ -53,7 +53,7 @@ Nguyễn Hồng Thông Điệp – 21110166
  2. Hệ thống kiểm tra input và xác thực.
  3. Hệ thống thông báo xác thực thành công.
 <br><br>
-  * Alternative flow (Thất bại):
+- Alternative flow (Thất bại):
     
     Khi xác thực thất bại hoặc xảy ra lỗi: hệ thống thông báo lỗi sai.
 - Extension point:
@@ -64,13 +64,13 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Pre-conditions: Actors đã đăng nhập thành công vào hệ thống.
 - Post-conditions: Tài khoản được đăng xuất thành công ra khỏi hệ thống.
 - Flow of events: 
-  * Basic flow (Thành công):
+- Basic flow (Thành công):
   <br><br>
  1. Người dùng bấm vào nút "Logout" ở trang Setting.
  2. Hệ thống thực hiện đăng xuất cho người dùng.
  3. Chuyển qua trang đăng nhập.
 <br><br>
-  * Alternative flow (Thất bại):
+- Alternative flow (Thất bại):
 - Extension point:
 
 ## UC04. Quên mật khẩu.
@@ -79,7 +79,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Pre-conditions: Actors đã có tài khoản trong hệ thống.
 - Post-conditions: Tài khoản của người dùng được cập nhật mật khẩu mới.
 - Flow of events: 
-  * Basic flow (Thành công):
+- Basic flow (Thành công):
   <br><br>
  1. Người dùng chọn "Forgot Password" ở trang Login.
  2. Hệ thống hiển thị trang ForgotPassword .
@@ -90,7 +90,7 @@ Nguyễn Hồng Thông Điệp – 21110166
  7. Người dùng nhập mật khẩu mới và chọn “Reset”.
  8. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
-  * Alternative flow (Thất bại):
+- Alternative flow (Thất bại):
     
     Đặt lại mật khẩu thất bại.
 <br><br>
@@ -107,7 +107,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Pre-conditions: Actors đã có tài khoản trong hệ thống và đã đăng nhập thành công vào hệ thống.
 - Post-conditions: Tài khoản của người dùng được cập nhật mật khẩu mới.
 - Flow of events: 
-  * Basic flow (Thành công):
+- Basic flow (Thành công):
   <br><br>
  1. Người dùng chọn "Change Password" ở trang Setting.
  2. Hệ thống hiển thị trang ChangePassword .
@@ -115,7 +115,7 @@ Nguyễn Hồng Thông Điệp – 21110166
  4. Hệ thống kiểm tra mật khẩu hiện tại của người dùng, nếu đúng thì sẽ đặt lại mật khẩu.
  5. Đặt lại mật khẩu thành công, người dùng được chuyển về trang Login.
 <br><br>
-  * Alternative flow (Thất bại):
+- Alternative flow (Thất bại):
   
     Đổi mật khẩu thất bại.
 <br><br>
