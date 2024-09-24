@@ -127,20 +127,28 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Extension point:
 
 ## UC06. Xác nhận OTP.
-- Brief description:
-- Actor: 
+- Brief description: Người dùng xác thực thông tin đăng ký, thay đổi mật khẩu bằng cách nhập mã OTP được gửi tới (qua email).
+- Actor: Người dùng (User) hoặc Guest 
 - Pre-conditions: 
-- Post-conditions: 
+- Post-conditions: Người dùng hoàn tất quá trình xác thực và được truy cập hệ thống hoặc được thay đổi mật khẩu.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng thực hiện một hành động yêu cầu xác thực (đăng ký hoặc thay đổi mật khẩu).
+ 2. Hệ thống gửi mã OTP đến người dùng qua phương thức xác thực (email).
+ 3. Người dùng nhập mã OTP nhận được vào ứng dụng/hệ thống.
+ 4. Hệ thống xác nhận mã OTP.
+ 5. Nếu mã OTP đúng, hệ thống cho phép người dùng hoàn tất quy trình xác thực hoặc giao dịch.
+
 
 - Alternative flow (Thất bại):
-
- 1. 
-
-    
+  
+Nếu mã OTP không hợp lệ hoặc hết hạn:
+ 1. Hệ thống thông báo mã OTP không hợp lệ hoặc đã hết hạn.
+ 2. Hệ thống cho phép người dùng yêu cầu mã OTP mới hoặc nhập lại mã.
+ 1. Nếu người dùng không nhận được mã OTP:
+ 2. Người dùng chọn tùy chọn "Resend".
+Hệ thống gửi mã OTP mới. 
 - Extension point:
 
 ## UC07. Chọn ngôn ngữ.
@@ -169,7 +177,7 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Basic flow (Thành công):
 
  1. Người dùng bấm vào Setting, chọn Profile và nhấn vào "Edit".
- 2. Người dùng nhập thông tin mới và bấm "Confim".
+ 2. Người dùng nhập thông tin mới và bấm "Confirm".
  3. Hệ thống cập nhật và hiển thị thông tin mới.
 
 - Alternative flow (Thất bại):
@@ -178,35 +186,45 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Extension point:
 
 ## UC09. Thêm thẻ.
-- Brief description:
-- Actor: 
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng có thể thêm một thẻ mới vào hệ thống để sử dụng cho các giao dịch thanh toán và quản lý tài khoản tài chính của họ.
+- Actor: Người dùng
+- Pre-conditions: Người dùng đã đăng nhập vào hệ thống.
+- Post-conditions: Thông tin thẻ mới sẽ được lưu vào hệ thống và người dùng có thể sử dụng thẻ này cho các giao dịch tiếp theo.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng truy cập vào trang "Thêm thẻ" thông qua mục quản lý thẻ.
+ 2. Người dùng điền các thông tin yêu cầu, bao gồm số thẻ, tên chủ thẻ, ngày hết hạn, CVV.
+ 3. Hệ thống kiểm tra tính hợp lệ của thông tin.
+ 4. Nếu thông tin hợp lệ, hệ thống lưu thẻ mới vào cơ sở dữ liệu.
+ 5. Người dùng nhận thông báo xác nhận rằng thẻ đã được thêm thành công.
 
 - Alternative flow (Thất bại):
 
- 1. 
+ 1. Nếu thông tin không hợp lệ (sai số thẻ, CVV không chính xác, ngày hết hạn không đúng,...), hệ thống sẽ hiển thị thông báo lỗi.
+ 2. Người dùng cần sửa lại các thông tin và thực hiện lại bước xác nhận.
 
     
 - Extension point:
 
 ## UC10. Xóa thẻ.
-- Brief description:
-- Actor: 
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng có thể xóa thẻ đã thêm khỏi hệ thống nếu không còn nhu cầu sử dụng hoặc muốn quản lý các thẻ tài chính một cách dễ dàng hơn.
+- Actor: Người dùng
+- Pre-conditions: Người dùng đã đăng nhập vào hệ thống.
+- Post-conditions: Thẻ sẽ được gỡ khỏi tài khoản của người dùng trong hệ thống và không thể sử dụng cho các giao dịch tiếp theo.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng truy cập vào trang quản lý thẻ từ mục cài đặt hoặc thông qua giao diện quản lý tài khoản.
+ 2. Người dùng chọn thẻ muốn xóa và nhấn nút "Xóa thẻ".
+ 3. Hệ thống yêu cầu người dùng xác nhận hành động xóa thẻ.
+ 4. Người dùng xác nhận xóa.
+ 5. Người dùng nhận được thông báo rằng thẻ đã được xóa thành công.
 
 - Alternative flow (Thất bại):
 
- 1. 
+ 1. Nếu thẻ không thể xóa do có các giao dịch đang xử lý hoặc thẻ là thẻ chính cho các giao dịch hiện tại, hệ thống sẽ hiển thị thông báo lỗi.
+ 2. Người dùng có thể chọn một thẻ khác hoặc thực hiện các bước xử lý để đảm bảo thẻ được phép xóa (ví dụ: đổi thẻ mặc định).
 
     
 - Extension point:
@@ -235,17 +253,22 @@ Nguyễn Hồng Thông Điệp – 21110166
 - Extension point:
 
 ## UC12. Chi tiết giao dịch.
-- Brief description: 
-- Actor: 
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng có thể chọn một giao dịch từ danh sách giao dịch và xem chi tiết của giao dịch đó, bao gồm số tiền, tài khoản, danh mục, ngày giờ, và ghi chú liên quan. 
+- Actor: Người dùng (User)
+- Pre-conditions:
+  1. Người dùng đã đăng nhập vào hệ thống.
+  2. Giao dịch đã được lưu trữ trước đó trong hệ thống.
+- Post-conditions: Người dùng có thể xem thông tin chi tiết của giao dịch đã chọn.
+
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng vào mục "See all" từ giao diện chính.
+ 2. Hệ thống hiển thị danh sách các giao dịch.
+ 3. Người dùng chọn một giao dịch từ danh sách.
+ 4. Hệ thống hiển thị màn hình chi tiết giao dịch, bao gồm số tiền, ngày giờ, tài khoản, danh mục, và các ghi chú liên quan.
 
-- Alternative flow (Thất bại):
-  
+- Alternative flow (Thất bại): Hệ thống báo không tìm thấy giao dịch
 - Extension point:  
 
 ## UC13. Chỉnh sửa giao dịch.
