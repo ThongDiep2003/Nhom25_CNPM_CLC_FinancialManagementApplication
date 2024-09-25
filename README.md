@@ -362,55 +362,92 @@ Hệ thống gửi mã OTP mới.
 - Extension point:
 
 ## UC18. Tạo ngân sách mới.
-- Brief description:
-- Actor:
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng tạo ra những hạn mức chi thu (hay cho gọi là ngân sách) cho những danh mục mình mong muốn trong phần Budget.
+- Actor: Người dùng
+- Pre-conditions: Người dùng đã có tài khoản trong hệ thống
+- Post-conditions: Hệ thống sẽ lưu trữ ngân sách trong cơ sở dữ liệu và hiển thị trong danh sách ngân sách của người dùng.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng truy cập vào mục "Ngân sách" từ trang chính hoặc mục cài đặt.
+ 2. Người dùng nhấn vào tùy chọn "Tạo ngân sách mới".
+ 3. Hệ thống hiển thị biểu mẫu yêu cầu người dùng nhập thông tin ngân sách, bao gồm: Danh mục và Số tiền
+ 4. Người dùng điền đầy đủ thông tin và nhấn "Xác nhận".
+ 5. Hệ thống kiểm tra tính hợp lệ của thông tin và lưu ngân sách vào cơ sở dữ liệu.
+ 6. Hệ thống thông báo rằng ngân sách đã được tạo thành công và hiển thị ngân sách vừa tạo trong danh sách ngân sách của người dùng.
 - Alternative flow (Thất bại):
-  
+
+  1. Nếu người dùng nhập thiếu thông tin hoặc nhập thông tin không hợp lệ, hệ thống sẽ hiển thị thông báo lỗi.
+  2. Người dùng sẽ được yêu cầu sửa đổi thông tin và thực hiện lại các bước từ bước 3.
 - Extension point:
 
 ## UC19. Xem chi tiết ngân sách.
-- Brief description:
-- Actor:
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng có thể xem thông tin chi tiết của một ngân sách đã tạo trước đó, bao gồm tổng số tiền ngân sách, chi tiêu hiện tại và các giao dịch đã được liên kết với ngân sách. Thông tin này giúp người dùng theo dõi tình hình tài chính của mình trong thời gian thực.
+- Actor: Người dùng
+- Pre-conditions: Người dùng đã đăng nhập vào hệ thống.
+- Post-conditions: Hệ thống hiển thị thông tin chi tiết ngân sách, bao gồm giới hạn ngân sách, chi tiêu hiện tại và các giao dịch đã xảy ra.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng truy cập vào mục "Ngân sách" từ trang chính hoặc từ menu quản lý.
+ 2. Hệ thống hiển thị danh sách các ngân sách mà người dùng đã tạo.
+ 3. Người dùng nhấn vào một ngân sách để xem chi tiết.
+ 4. Hệ thống hiển thị thông tin chi tiết của ngân sách bao gồm:
+     - Tổng số tiền ngân sách.
+     - Số tiền đã chi tiêu (được cập nhật theo các giao dịch thực tế).
+     - Số tiền còn lại hoặc vượt quá giới hạn.
+     - Danh sách các giao dịch đã được liên kết với ngân sách.
+
 - Alternative flow (Thất bại):
-  
+  1. Nếu không có giao dịch nào liên quan đến ngân sách, hệ thống sẽ hiển thị thông báo rằng chưa có giao dịch.
+  2. Người dùng có thể nhấn vào tùy chọn "Thêm giao dịch" hoặc "Chỉnh sửa ngân sách" nếu cần.
 - Extension point:
 
 ## UC20. Chỉnh sửa ngân sách.
-- Brief description:
-- Actor:
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng có thể chỉnh sửa các thông tin liên quan đến ngân sách mà họ đã tạo trước đó, bao gồm việc điều chỉnh tổng số tiền ngân sách, thay đổi danh mục.
+- Actor: Người dùng
+- Pre-conditions:
+  1. Người dùng đã đăng nhập vào hệ thống.
+  2. Người dùng đã có ít nhất một ngân sách được tạo trước đó.
+- Post-conditions: Hệ thống lưu lại các thay đổi và cập nhật thông tin ngân sách mới nhất.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng truy cập vào mục "Ngân sách" và chọn một ngân sách cụ thể từ danh sách.
+ 2. Hệ thống hiển thị chi tiết của ngân sách.
+ 3. Người dùng nhấn vào nút "Chỉnh sửa".
+ 4. Hệ thống hiển thị giao diện chỉnh sửa ngân sách với các trường thông tin có thể thay đổi:
+ 5. Tổng số tiền ngân sách (người dùng có thể tăng/giảm số tiền).
+ 6. Danh mục chi tiêu/thu nhập áp dụng cho ngân sách.
+ 7. Người dùng thực hiện các thay đổi và nhấn "Xác nhận" để lưu lại thông tin.
+ 8. Hệ thống kiểm tra tính hợp lệ của thông tin đầu vào.
+ 9. Nếu mọi thông tin hợp lệ, hệ thống sẽ cập nhật ngân sách với các thay đổi mới.
+ 10. Người dùng được thông báo chỉnh sửa ngân sách thành công và quay lại màn hình chi tiết ngân sách.
 - Alternative flow (Thất bại):
-  
+  1. Nếu người dùng nhập sai dữ liệu (ví dụ số tiền không hợp lệ hoặc thời gian không đúng), hệ thống sẽ hiển thị thông báo lỗi và yêu cầu người dùng sửa lại.
+  2. Người dùng có thể hủy bỏ quá trình chỉnh sửa và quay lại màn hình chi tiết mà không lưu bất kỳ thay đổi nào.
+
 - Extension point:
 
 ## UC21. Xóa ngân sách.
-- Brief description:
-- Actor:
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Người dùng có thể xóa một ngân sách mà họ đã tạo trước đó. Việc xóa ngân sách sẽ loại bỏ hoàn toàn các thông tin liên quan đến ngân sách đó nhưng không ảnh hưởng đến lịch sử giao dịch đã ghi nhận.
+- Actor: Người dùng
+- Pre-conditions: Người dùng đã đăng nhập vào hệ thống.
+- Người dùng đã có ít nhất một ngân sách được tạo trước đó.
+- Post-conditions: Hệ thống xóa toàn bộ thông tin liên quan đến ngân sách, không còn hiển thị trong danh sách ngân sách của người dùng.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
+ 1. Người dùng truy cập vào mục "Ngân sách" và chọn ngân sách mà họ muốn xóa từ danh sách.
+ 2. Hệ thống hiển thị chi tiết của ngân sách.
+ 3. Người dùng nhấn vào nút "Xóa" ngân sách.
+ 4. Hệ thống hiển thị một thông báo xác nhận, yêu cầu người dùng xác nhận họ thực sự muốn xóa ngân sách này.
+ 5. Người dùng xác nhận xóa ngân sách.
+ 6. Hệ thống kiểm tra và xóa ngân sách khỏi cơ sở dữ liệu, cùng với tất cả thông tin liên quan.
+ 7. Người dùng nhận được thông báo ngân sách đã xóa thành công và quay trở lại danh sách ngân sách, nơi ngân sách vừa xóa không còn hiển thị.
 - Alternative flow (Thất bại):
-  
+  1. Nếu người dùng nhấn "Hủy" tại bước xác nhận, quá trình xóa sẽ bị hủy bỏ và người dùng quay lại màn hình chi tiết ngân sách mà không có bất kỳ thay đổi nào.
+  2. Nếu hệ thống gặp sự cố trong quá trình xóa (ví dụ lỗi kết nối hoặc cơ sở dữ liệu), người dùng nhận được thông báo lỗi và có thể thử lại sau.
 - Extension point:
 
 ## UC22. Tạo mục tiêu mới.
@@ -438,15 +475,24 @@ Hệ thống gửi mã OTP mới.
 - Extension point:
 
 ## UC23. Chi tiết mục tiêu.
-- Brief description:
-- Actor:
-- Pre-conditions: 
-- Post-conditions: 
+- Brief description: Brief description 
+Người dùng có thể xem thông tin chi tiết của từng mục tiêu tài chính đã đặt ra. Điều này bao gồm các thông tin như tên mục tiêu, số tiền cần đạt, số tiền đã tiết kiệm được và tỷ lệ hoàn thành.
+- Actor: Người dùng
+- Pre-conditions:
+  1. Người dùng đã đăng nhập vào hệ thống.
+  2. Người dùng đã thiết lập ít nhất một mục tiêu ngân sách.
+- Post-conditions: Hệ thống hiển thị chi tiết mục tiêu mà người dùng yêu cầu, bao gồm các thông tin về tiến độ đạt được và những dữ liệu liên quan khác.
 - Flow of events: 
 - Basic flow (Thành công):
 
- 1. 
-- Alternative flow (Thất bại):
+ 1. Người dùng truy cập vào phần "Mục tiêu ngân sách" trong ứng dụng.
+ 2. Hệ thống hiển thị danh sách các mục tiêu mà người dùng đã thiết lập.
+ 3. Người dùng nhấp chọn một mục tiêu cụ thể từ danh sách để xem chi tiết.
+ 4. Hệ thống hiển thị thông tin chi tiết về mục tiêu, bao gồm:
+     - Tên mục tiêu.
+     - Số tiền cần đạt.
+     - Số tiền đã tiết kiệm được cho mục tiêu.
+- Alternative flow (Thất bại): Nếu không có mục tiêu nào được thiết lập, hệ thống sẽ hiển thị thông báo "Bạn chưa có mục tiêu nào được tạo".
   
 - Extension point:
 
