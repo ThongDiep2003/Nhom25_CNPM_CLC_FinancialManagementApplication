@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "327504117742",
+    "firebase_url": "https://flowup-a1ead-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flowup-a1ead",
+    "storage_bucket": "flowup-a1ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327504117742:android:bd4f873824a753e81258ff",
+        "android_client_info": {
+          "package_name": "com.bisoo12300.BT03"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZDHlWCbn5QLEUNhGBR_KPLG0hUjF8aV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
