@@ -1,0 +1,426 @@
+{
+  "categories": {
+    "1WjWYLcm5jW7ReIFXliYQfbSPKq2": {
+      "1732562854607": {
+        "color": "#009688",
+        "icon": "bank",
+        "id": "1732562854607",
+        "name": "Bank",
+        "type": "Income"
+      },
+      "1732562945298": {
+        "color": "#673ab7",
+        "icon": "guitar-electric",
+        "id": "1732562945298",
+        "name": "Pub",
+        "type": "Expense"
+      },
+      "1732699538597": {
+        "color": "#795548",
+        "icon": "basketball",
+        "id": "1732699538597",
+        "name": "Sport",
+        "type": "Expense"
+      },
+      "1732699647130": {
+        "color": "#ff5722",
+        "icon": "cat",
+        "id": "1732699647130",
+        "name": "Meow",
+        "type": "Expense"
+      },
+      "1732699656230": {
+        "color": "#9c27b0",
+        "icon": "gift",
+        "id": "1732699656230",
+        "name": "Present",
+        "type": "Income"
+      }
+    },
+    "IQ7RI4LmRWRq6flm4GWuAh1Fgt43": {
+      "1732086840642": {
+        "color": "#673ab7",
+        "icon": "home",
+        "id": "1732086840642",
+        "name": "Housing",
+        "type": "Expense"
+      },
+      "1732088457358": {
+        "color": "#03a9f4",
+        "icon": "truck-fast",
+        "id": "1732088457358",
+        "name": "Ship",
+        "type": "Expense"
+      }
+    },
+    "LwbQ60XfJnRJlHcDkrOxT4myXiX2": {
+      "1732811450473": {
+        "color": "#673ab7",
+        "icon": "home",
+        "id": "1732811450473",
+        "name": "Home",
+        "type": "Expense"
+      }
+    },
+    "QfVrVAroTGdg94VrlHcn8Lp00qJ2": {
+      "1732727125004": {
+        "color": "#03a9f4",
+        "icon": "truck-fast",
+        "id": "1732727125004",
+        "name": "tutu",
+        "type": "Expense"
+      },
+      "1733295263816": {
+        "color": "#ff9800",
+        "icon": "cash",
+        "id": "1733295263816",
+        "name": "a",
+        "type": "Expense"
+      }
+    },
+    "WCTmvxiZ1Lfw04y1HXNmTNMQrkM2": {
+      "1732755382566": {
+        "color": "#03a9f4",
+        "icon": "truck-fast",
+        "id": "1732755382566",
+        "name": "Transport",
+        "type": "Expense"
+      },
+      "1732755389774": {
+        "color": "#e91e63",
+        "icon": "food",
+        "id": "1732755389774",
+        "name": "Eating",
+        "type": "Expense"
+      },
+      "1732755398629": {
+        "color": "#4caf50",
+        "icon": "shopping-outline",
+        "id": "1732755398629",
+        "name": "Shopping",
+        "type": "Expense"
+      },
+      "1732755409045": {
+        "color": "#2196f3",
+        "icon": "medical-bag",
+        "id": "1732755409045",
+        "name": "Medical",
+        "type": "Expense"
+      },
+      "1732755427414": {
+        "color": "#ff5722",
+        "icon": "airplane",
+        "id": "1732755427414",
+        "name": "Travel",
+        "type": "Expense"
+      },
+      "1732755438348": {
+        "color": "#9c27b0",
+        "icon": "gift",
+        "id": "1732755438348",
+        "name": "Present",
+        "type": "Income"
+      },
+      "1732755446947": {
+        "color": "#ff4081",
+        "icon": "chart-line",
+        "id": "1732755446947",
+        "name": "Invesstment",
+        "type": "Income"
+      },
+      "1732755468405": {
+        "color": "#009688",
+        "icon": "bank",
+        "id": "1732755468405",
+        "name": "Banking",
+        "type": "Income"
+      },
+      "1732755837893": {
+        "color": "#ff5722",
+        "icon": "piggy-bank",
+        "id": "1732755837893",
+        "name": "Saving",
+        "type": "Income"
+      }
+    },
+    "zBOegjyBvRPIbgGSmjzqE5gWNk83": {
+      "1732816560022": {
+        "color": "#03a9f4",
+        "icon": "truck-fast",
+        "id": "1732816560022",
+        "name": "Transport",
+        "type": "Expense"
+      }
+    }
+  },
+  "forum": {
+    "-ODSFuQtWYd7MajmJwY7": {
+      "email": "thaison123456xyz@gmail.com",
+      "question": "test",
+      "replies": {
+        "-ODSHnS4PKXzGJiu-WfP": {
+          "email": "thongdiep2003@gmail.com",
+          "read": true,
+          "reply": "t nghi la nen dem trang nay ra home page"
+        },
+        "-ODSPtRrwprZyeVfzbJW": {
+          "email": "thaison123456xyz@gmail.com",
+          "read": true,
+          "reply": "Qua ngon luon",
+          "timestamp": 1733512893687
+        },
+        "-ODSRuJj8h0p0yyAXwRg": {
+          "email": "thongdiep2003@gmail.com",
+          "read": true,
+          "reply": "nice",
+          "timestamp": 1733513422039
+        },
+        "-ODSRzqhKCDdU0tAPC_5": {
+          "email": "thongdiep2003@gmail.com",
+          "read": true,
+          "reply": "ma no khong thong bao da them thanh cong, clm :>>",
+          "timestamp": 1733513444727
+        },
+        "-ODSS5l-pGZHTFzOUS4C": {
+          "email": "thaison123456xyz@gmail.com",
+          "read": true,
+          "reply": "Khong thong bao la tot",
+          "timestamp": 1733513472521
+        }
+      },
+      "timestamp": 1733510276774
+    },
+    "-ODSQ108M7V_6fwBEYfq": {
+      "email": "thaison123456xyz@gmail.com",
+      "question": "tét2",
+      "replies": {
+        "-ODSQuU8YtJ9VGroMrjY": {
+          "email": "thongdiep2003@gmail.com",
+          "read": true,
+          "reply": "thu lai xem con bao loi khong",
+          "timestamp": 1733513160531
+        },
+        "-ODSQyndzRSY0-cVhh2G": {
+          "email": "thongdiep2003@gmail.com",
+          "read": true,
+          "reply": "thu lai xem con bao loi khong",
+          "timestamp": 1733513178227
+        },
+        "-ODSSv49KJWNE6eiX--y": {
+          "email": "thaison123456xyz@gmail.com",
+          "read": true,
+          "reply": "a",
+          "timestamp": 1733513686803
+        }
+      },
+      "timestamp": 1733512928786
+    },
+    "-ODSS3bDtvnzle4bq3kx": {
+      "email": "thongdiep2003@gmail.com",
+      "question": "thu xem nao",
+      "replies": {
+        "-ODSSpwkm1KmOq96sEvL": {
+          "email": "thongdiep2003@gmail.com",
+          "read": false,
+          "reply": "la sao ta",
+          "timestamp": 1733513666297
+        },
+        "-ODSWyrDvjjBIZmLNFIs": {
+          "email": "thongdiep2003@gmail.com",
+          "read": false,
+          "reply": "sao",
+          "timestamp": 1733514751374
+        },
+        "-ODSb20BPnSsuosYooZI": {
+          "email": "thongdiep2003@gmail.com",
+          "read": false,
+          "reply": "Sao",
+          "timestamp": 1733516078816
+        },
+        "-ODTCvsiuz4yvDKmXBiO": {
+          "email": "thongdiep2003@gmail.com",
+          "read": false,
+          "reply": "nao",
+          "timestamp": 1733526274209
+        }
+      },
+      "timestamp": 1733513464216
+    },
+    "-ODVvdhDM5QDYWtmoOQ6": {
+      "email": "thaison123456xyz@gmail.com",
+      "question": "test badge",
+      "replies": {
+        "-ODVvwIxuvy8_Jq5WaVM": {
+          "email": "thongdiep2003@gmail.com",
+          "read": true,
+          "reply": "le len",
+          "timestamp": 1733571888233
+        },
+        "-ODVwG8w1kBM6BJeUxi2": {
+          "email": "thongdiep2003@gmail.com",
+          "read": false,
+          "reply": "xoa luon di",
+          "timestamp": 1733571973652
+        },
+        "-ODVwVhjLmLONnFxQiQb": {
+          "email": "thaison123456xyz@gmail.com",
+          "read": false,
+          "reply": "ổn",
+          "timestamp": 1733572038009
+        }
+      },
+      "timestamp": 1733571812665
+    }
+  },
+  "otp": {
+    "21110289@student,hcmute,edu,vn": {
+      "otp": "806882",
+      "timestamp": 1732816428614
+    },
+    "bisoo12300@gmail,com": {
+      "otp": "750974",
+      "timestamp": 1732817121139
+    },
+    "thaison123456xyz@gmail,com": {
+      "otp": "965702",
+      "timestamp": 1732728129157
+    },
+    "thongdiep2003@gmail,com": {
+      "otp": "992502",
+      "timestamp": 1733525710213
+    },
+    "tsdev2k3@gmail,com": {
+      "otp": "730286",
+      "timestamp": 1733293203199
+    }
+  },
+  "users": {
+    "IQ7RI4LmRWRq6flm4GWuAh1Fgt43": {
+      "avatarUrl": "https://firebasestorage.googleapis.com/v0/b/flowup-a1ead.appspot.com/o/avatars%2FIQ7RI4LmRWRq6flm4GWuAh1Fgt43.jpg?alt=media&token=461a9863-f486-4edf-92a3-cf7f9ec7853c",
+      "birthdate": "2006",
+      "email": "thongdiep2003@gmail.com",
+      "mobile": "0392963132",
+      "name": "Nguyen Hong Thong Diep",
+      "status": "active",
+      "statusUpdatedAt": "2024-12-07T04:32:37.635Z",
+      "transactions": {
+        "-ODTAh69DEqFv846kwdj": {
+          "account": "Cash",
+          "amount": 8888,
+          "category": {
+            "icon": "home",
+            "id": "1732086840642",
+            "name": "Housing"
+          },
+          "date": "2024-12-06T22:54:39.781Z",
+          "type": "Expense"
+        }
+      }
+    },
+    "LwbQ60XfJnRJlHcDkrOxT4myXiX2": {
+      "email": "21110289@student.hcmute.edu.vn",
+      "timestamp": 1732810906347
+    },
+    "QfVrVAroTGdg94VrlHcn8Lp00qJ2": {
+      "avatarUrl": "https://firebasestorage.googleapis.com/v0/b/flowup-a1ead.appspot.com/o/avatars%2FQfVrVAroTGdg94VrlHcn8Lp00qJ2.jpg?alt=media&token=999c5bb8-b9db-4a41-b175-4ed5a54087c3",
+      "birthdate": "2003/07/10",
+      "budgets": {
+        "1733508912088": {
+          "amount": 1000000,
+          "categoryColor": "#03a9f4",
+          "categoryIcon": "truck-fast",
+          "categoryId": "1732727125004",
+          "categoryName": "tutu",
+          "endDate": "2024-12-06T18:15:04.098Z",
+          "name": "tutu"
+        }
+      },
+      "cards": {
+        "-ODTtRLX2qGt-wLiIJBk": {
+          "bankName": "VCB",
+          "cardNumber": "****-****-****-****",
+          "color": "#FECFEF",
+          "cvv": "***",
+          "expiryDate": "MM/YYYY",
+          "holderName": "CARD HOLDER"
+        }
+      },
+      "email": "thaison123456xyz@gmail.com",
+      "goals": {
+        "1733509168444": {
+          "categoryColor": "#ff9800",
+          "categoryIcon": "cash",
+          "categoryId": "1733295263816",
+          "categoryName": "a",
+          "createdAt": "2024-12-06T18:19:28.444Z",
+          "endDate": "2024-12-30T18:19:00.000Z",
+          "name": "a",
+          "progress": 0,
+          "targetAmount": 1000000
+        }
+      },
+      "mobile": "0966592038",
+      "name": "Đoàn Thái Sơn",
+      "timestamp": 1732438215464,
+      "transactions": {
+        "-ODSAjlFeksdOlwdN657": {
+          "account": "Cash",
+          "amount": 900000,
+          "category": {
+            "icon": "truck-fast",
+            "id": "1732727125004",
+            "name": "tutu"
+          },
+          "date": "2024-12-06T18:15:14.210Z",
+          "type": "Expense"
+        },
+        "-ODSa0AHWg-_BIVJIekx": {
+          "account": "Cash",
+          "amount": 10000,
+          "category": {
+            "icon": "truck-fast",
+            "id": "1732727125004",
+            "name": "tutu"
+          },
+          "date": "2024-12-06T20:09:11.315Z",
+          "type": "Expense"
+        },
+        "-ODTx963bbtAn4gKJ6ig": {
+          "account": "Cash",
+          "amount": 10000,
+          "category": {
+            "icon": "truck-fast",
+            "id": "1732727125004",
+            "name": "tutu"
+          },
+          "date": "2024-12-07T02:30:46.417Z",
+          "type": "Expense"
+        }
+      }
+    },
+    "WCTmvxiZ1Lfw04y1HXNmTNMQrkM2": {
+      "avatarUrl": "https://firebasestorage.googleapis.com/v0/b/flowup-a1ead.appspot.com/o/avatars%2FWCTmvxiZ1Lfw04y1HXNmTNMQrkM2.jpg?alt=media&token=bce8d9b6-b317-4823-b3ae-a6485f5bb54c",
+      "birthdate": "2003-07-10",
+      "blockReason": "",
+      "email": "bisoo12300@gmail.com",
+      "mobile": "0966592038",
+      "name": "Đoàn Thái Sơn",
+      "status": "blocked",
+      "statusUpdatedAt": "2024-12-07T04:58:47.195Z"
+    },
+    "zBOegjyBvRPIbgGSmjzqE5gWNk83": {
+      "cards": {
+        "-OCnurzi5xV8Duf6rdnK": {
+          "bankName": "BIDV",
+          "cardNumber": "1465-6143-6462-4362",
+          "color": "#00C9A7",
+          "cvv": "123",
+          "expiryDate": "06/2028",
+          "holderName": "NGUYEN HONG THONG DIEP"
+        }
+      },
+      "email": "21110289@student.hcmute.edu.vn",
+      "timestamp": 1732816462665
+    }
+  }
+}
