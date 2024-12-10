@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, TouchableOpacity, SafeAreaView, Platform, StatusBar } from 'react-native';
+import { View, Text, Image, TouchableOpacity, FlatList, SafeAreaView, Platform, StatusBar } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { FIREBASE_DB, FIREBASE_AUTH, getUserProfile } from '../../auths/FirebaseConfig';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
@@ -7,7 +7,6 @@ import { ref, onValue } from 'firebase/database';
 import tw from 'tailwind-react-native-classnames';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { PieChart } from 'react-native-gifted-charts';
-import { SectionList } from 'react-native';
 
 const iconList = [
   { name: 'car', color: '#f44336' },
@@ -117,7 +116,7 @@ const HomePage = () => {
       if (currentUser) {
         const userId = currentUser.uid;
         const userProfile = await getUserProfile(userId);
-
+  
         setUserName(userProfile.name);
         if (userProfile.avatarUrl) {
           const storage = getStorage();
@@ -127,17 +126,19 @@ const HomePage = () => {
         } else {
           setUserAvatar('https://via.placeholder.com/60');
         }
-
+  
         const transactionsRef = ref(FIREBASE_DB, `users/${userId}/transactions`);
         onValue(transactionsRef, (snapshot) => {
           const data = snapshot.val();
           if (data) {
             const fetchedTransactions = Object.values(data).reverse();
-
+  
+            // Lấy tháng và năm hiện tại
             const currentDate = new Date();
-            const currentMonth = currentDate.getMonth();
+            const currentMonth = currentDate.getMonth(); 
             const currentYear = currentDate.getFullYear();
-
+  
+            // Lọc các giao dịch trong tháng và năm hiện tại
             const filteredTransactions = fetchedTransactions.filter((transaction) => {
               const transactionDate = new Date(transaction.date);
               return (
@@ -145,14 +146,14 @@ const HomePage = () => {
                 transactionDate.getFullYear() === currentYear
               );
             });
-
+  
             setTransactions(filteredTransactions.slice(0, 20));
-
+  
             let income = 0;
             let expense = 0;
             const expenseData = {};
             const incomeData = {};
-
+  
             filteredTransactions.forEach((transaction) => {
               if (transaction.type === 'Income') {
                 income += parseFloat(transaction.amount);
@@ -182,7 +183,7 @@ const HomePage = () => {
                 }
               }
             });
-
+  
             setTotalIncome(income);
             setTotalExpense(expense);
             setExpenseCategories(Object.values(expenseData));
@@ -244,102 +245,91 @@ const HomePage = () => {
       }))
     : [];
 
-  const filteredTransactions = transactions.filter((transaction) => transaction.type === displayType);
-
   return (
     <SafeAreaView style={[tw`flex-1 bg-white`, { paddingTop: Platform.OS === 'ios' ? 35 : StatusBar.currentHeight - 10 }]}>
-      <SectionList
-        sections={[
-          {
-            title: 'Recent Transactions',
-            data: filteredTransactions
-          }
-        ]}
-        keyExtractor={(item, index) => index.toString()}
-        stickySectionHeadersEnabled={true}
-        renderSectionHeader={({ section: { title } }) => (
-          <View style={[tw`flex-row justify-between bg-white p-3 mx-4`]}>
-            <Text style={tw`text-lg font-bold`}>{title}</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('AllTransaction')}>
-              <Text style={tw`text-sm text-blue-500`}>See All</Text>
-            </TouchableOpacity>
+      <View style={[tw`p-5 flex-row justify-between items-center rounded-b-lg`]}>
+        <View style={tw`flex-row items-center`}>
+          <Image
+            source={userAvatar ? { uri: userAvatar } : require('../../assets/avatar.png')}
+            style={tw`w-12 h-12 rounded-full`}
+          />
+          <View style={tw`ml-3`}>
+            <Text style={tw`text-base text-gray-500`}>Welcome,</Text>
+            <Text style={tw`text-lg font-bold`}>{userName}</Text>
           </View>
+        </View>
+        <NotificationBell />
+      </View>
+
+      <View style={tw`flex-row justify-around mt-5`}>
+        <TouchableOpacity onPress={handleExpensePress} style={[tw`p-5 rounded-lg`, { backgroundColor: displayType === 'Expense' ? '#ffebee' : '#f5f5f5', width: 175 }]}>
+          <Text style={tw`text-sm text-black`}>Expense</Text>
+          <Text style={tw`text-base font-bold text-red-600`}>- {totalExpense.toLocaleString()} VND</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleIncomePress} style={[tw`p-5 rounded-lg`, { backgroundColor: displayType === 'Income' ? '#e8f5e9' : '#f5f5f5', width: 175 }]}>
+          <Text style={tw`text-sm text-black`}>Income</Text>
+          <Text style={tw`text-base font-bold text-green-600`}>+ {totalIncome.toLocaleString()} VND</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={[tw`mt-0 mb-0 p-3 rounded-lg justify-center items-center`]}>
+        <Text style={tw`text-lg font-bold text-center mb-3`}>{displayType} Distribution</Text>
+        {pieData.length > 0 ? (
+          <PieChart
+            data={pieData}
+            donut
+            showGradient
+            sectionAutoFocus
+            focusOnPress={true}
+            radius={100}
+            innerRadius={70}
+            innerCircleColor="#ffffff"
+            centerLabelComponent={() => {
+              if (focusedSection !== null && focusedSection < categories.length) {
+                const focusedData = categories[focusedSection];
+                return (
+                  <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                    <Text style={{ fontSize: 22, color: 'black', fontWeight: 'bold' }}>
+                      {Math.round((focusedData.amount / (displayType === 'Expense' ? totalExpense : totalIncome)) * 100)}%
+                    </Text>
+                    <Text style={{ fontSize: 14, color: 'black' }}>{focusedData.name}</Text>
+                  </View>
+                );
+              }
+              return null;
+            }}
+          />
+        ) : (
+          <Text>No data available</Text>
         )}
-        renderItem={({ item }) => (
-          <View style={tw`flex-row justify-between bg-gray-100 p-3 rounded-lg mb-2 mx-6`}>
-            <View style={tw`flex-row items-center`}>
-              <Icon name={item.category.icon} size={24} color={iconList.find(icon => icon.name === item.category.icon)?.color || '#000'} />
-              <Text style={tw`ml-2`}>{item.category.name}</Text>
-            </View>
-            <Text style={tw`${item.type === 'Expense' ? 'text-red-600' : 'text-green-600'} font-bold`}>
-              {item.type === 'Expense' ? '-' : '+'} {item.amount.toLocaleString()} VND
-            </Text>
-          </View>
-        )}
-        ListHeaderComponent={
-          <View>
-            {/* Header top section: User info and notification */}
-            <View style={[tw`p-5 flex-row justify-between items-center rounded-b-lg`]}>
+      </View>
+
+      <View style={tw`flex-1 p-6`}>
+        <View style={tw`flex-row justify-between mb-3`}>
+          <Text style={tw`text-lg font-bold`}>Recent Transactions</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('AllTransaction')}>
+            <Text style={tw`text-sm text-blue-500`}>See All</Text>
+          </TouchableOpacity>
+        </View>
+        <FlatList
+          data={transactions.filter((transaction) => transaction.type === displayType)}
+          renderItem={({ item }) => (
+            <View
+              onPress={() => navigation.navigate('Transaction', { transaction: item })}
+              style={tw`flex-row justify-between bg-gray-100 p-3 rounded-lg mb-2`}
+            >
               <View style={tw`flex-row items-center`}>
-                <Image
-                  source={userAvatar ? { uri: userAvatar } : require('../../assets/avatar.png')}
-                  style={tw`w-12 h-12 rounded-full`}
-                />
-                <View style={tw`ml-3`}>
-                  <Text style={tw`text-base text-gray-500`}>Welcome,</Text>
-                  <Text style={tw`text-lg font-bold`}>{userName}</Text>
-                </View>
+                <Icon name={item.category.icon} size={24} color={iconList.find(icon => icon.name === item.category.icon)?.color || '#000'} />
+                <Text style={tw`ml-2`}>{item.category.name}</Text>
               </View>
-              <NotificationBell />
+              <Text style={tw`${item.type === 'Expense' ? 'text-red-600' : 'text-green-600'} font-bold`}>
+                {item.type === 'Expense' ? '-' : '+'} {item.amount.toLocaleString()} VND
+              </Text>
             </View>
-
-            {/* Expense / Income summary */}
-            <View style={tw`flex-row justify-around mt-5`}>
-              <TouchableOpacity onPress={handleExpensePress} style={[tw`p-5 rounded-lg`, { backgroundColor: displayType === 'Expense' ? '#ffebee' : '#f5f5f5', width: 175 }]}>
-                <Text style={tw`text-sm text-black`}>Expense</Text>
-                <Text style={tw`text-base font-bold text-red-600`}>- {totalExpense.toLocaleString()} VND</Text>
-              </TouchableOpacity>
-              <TouchableOpacity onPress={handleIncomePress} style={[tw`p-5 rounded-lg`, { backgroundColor: displayType === 'Income' ? '#e8f5e9' : '#f5f5f5', width: 175 }]}>
-                <Text style={tw`text-sm text-black`}>Income</Text>
-                <Text style={tw`text-base font-bold text-green-600`}>+ {totalIncome.toLocaleString()} VND</Text>
-              </TouchableOpacity>
-            </View>
-
-            {/* Pie Chart */}
-            <View style={[tw`mt-0 mb-0 p-3 rounded-lg justify-center items-center`]}>
-              <Text style={tw`text-lg font-bold text-center mb-3`}>{displayType} Distribution</Text>
-              {pieData.length > 0 ? (
-                <PieChart
-                  data={pieData}
-                  donut
-                  showGradient
-                  sectionAutoFocus
-                  focusOnPress={true}
-                  radius={100}
-                  innerRadius={70}
-                  innerCircleColor="#ffffff"
-                  centerLabelComponent={() => {
-                    if (focusedSection !== null && focusedSection < categories.length) {
-                      const focusedData = categories[focusedSection];
-                      return (
-                        <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                          <Text style={{ fontSize: 22, color: 'black', fontWeight: 'bold' }}>
-                            {Math.round((focusedData.amount / (displayType === 'Expense' ? totalExpense : totalIncome)) * 100)}%
-                          </Text>
-                          <Text style={{ fontSize: 14, color: 'black' }}>{focusedData.name}</Text>
-                        </View>
-                      );
-                    }
-                    return null;
-                  }}
-                />
-              ) : (
-                <Text>No data available</Text>
-              )}
-            </View>
-          </View>
-        }
-      />
+          )}
+          keyExtractor={(item, index) => index.toString()}
+        />
+      </View>
     </SafeAreaView>
   );
 };

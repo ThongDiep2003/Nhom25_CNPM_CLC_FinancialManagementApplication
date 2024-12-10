@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, TextInput, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { FIREBASE_DB, FIREBASE_AUTH } from '../../../auths/FirebaseConfig';
 import { ref, onValue, remove } from 'firebase/database';
-import * as Notifications from 'expo-notifications';
+import { useNavigation } from '@react-navigation/native';
 
 const icons = [
   { name: 'car', color: '#f44336' },
@@ -43,12 +43,15 @@ const icons = [
 const AllTransaction = ({ navigation }) => {
   const [transactions, setTransactions] = useState([]);
   const [filteredTransactions, setFilteredTransactions] = useState([]);
-  const [selectedTransactions, setSelectedTransactions] = useState([]); // Mảng các giao dịch đã chọn
   const [searchQuery, setSearchQuery] = useState('');
   const [filterType, setFilterType] = useState('All'); // Options: 'All', 'Income', 'Expense'
 
+  const [isSelectionMode, setIsSelectionMode] = useState(false);
+  const [selectedTransactions, setSelectedTransactions] = useState([]);
+
+  const currentUser = FIREBASE_AUTH.currentUser;
+  
   useEffect(() => {
-    const currentUser = FIREBASE_AUTH.currentUser;
     if (currentUser) {
       const transactionsRef = ref(FIREBASE_DB, `users/${currentUser.uid}/transactions`);
       onValue(transactionsRef, (snapshot) => {
@@ -60,21 +63,23 @@ const AllTransaction = ({ navigation }) => {
           }));
           setTransactions(transactionList);
           setFilteredTransactions(transactionList); // Initialize filtered transactions
+        } else {
+          setTransactions([]);
+          setFilteredTransactions([]);
         }
       });
     }
-  }, []);
+  }, [currentUser]);
 
-  // Filter and search transactions
   useEffect(() => {
     let filteredData = transactions;
 
-    // Apply filter type
+    // Filter by type
     if (filterType !== 'All') {
       filteredData = filteredData.filter((item) => item.type === filterType);
     }
 
-    // Apply search query
+    // Search query
     if (searchQuery.trim()) {
       filteredData = filteredData.filter(
         (item) =>
@@ -86,48 +91,86 @@ const AllTransaction = ({ navigation }) => {
     setFilteredTransactions(filteredData);
   }, [searchQuery, filterType, transactions]);
 
-  // Toggle chọn giao dịch
-  const toggleSelection = (id) => {
-    setSelectedTransactions((prevSelected) => {
-      if (prevSelected.includes(id)) {
-        return prevSelected.filter((item) => item !== id); // Deselect
-      } else {
-        return [...prevSelected, id]; // Select
-      }
-    });
+  const handleLongPressTransaction = (transactionId) => {
+    setIsSelectionMode(true);
+    setSelectedTransactions([transactionId]);
   };
 
-  // Xóa các giao dịch đã chọn
-  const handleDeleteSelected = () => {
-    Alert.alert('Delete Transactions', 'Are you sure you want to delete the selected transactions?', [
-      { text: 'Cancel' },
-      {
-        text: 'Delete',
-        onPress: async () => {
-          const currentUser = FIREBASE_AUTH.currentUser;
-          if (currentUser) {
-            const userTransactionsRef = ref(FIREBASE_DB, `users/${currentUser.uid}/transactions`);
-            for (let transactionId of selectedTransactions) {
-              await remove(ref(userTransactionsRef, transactionId));
-            }
-            setSelectedTransactions([]); // Clear selected transactions after deletion
-            Alert.alert('Success', 'Selected transactions have been deleted.');
-          }
+  const handlePressTransaction = (transaction) => {
+    if (isSelectionMode) {
+      toggleSelectTransaction(transaction.id);
+    } else {
+      navigation.navigate('Transaction', { transaction: transaction });
+    }
+  };
+
+  const toggleSelectTransaction = (transactionId) => {
+    if (selectedTransactions.includes(transactionId)) {
+      setSelectedTransactions(selectedTransactions.filter((id) => id !== transactionId));
+    } else {
+      setSelectedTransactions([...selectedTransactions, transactionId]);
+    }
+  };
+
+  const confirmDeleteSelectedTransactions = () => {
+    if (selectedTransactions.length === 0) return;
+    Alert.alert(
+      'Delete Transactions',
+      'Are you sure you want to delete the selected transactions?',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete',
+          style: 'destructive',
+          onPress: () => deleteSelectedTransactionsWithAlert(),
         },
-      },
-    ]);
+      ],
+      { cancelable: true }
+    );
   };
 
-  // Render giao dịch
+  const deleteSelectedTransactionsWithAlert = async () => {
+    try {
+      await deleteSelectedTransactions();
+      Alert.alert('Success', 'Selected transactions deleted successfully.');
+    } catch (error) {
+      console.error('Error deleting transactions:', error);
+      Alert.alert('Error', 'Failed to delete selected transactions.');
+    } finally {
+      setIsSelectionMode(false);
+      setSelectedTransactions([]);
+    }
+  };
+
+  const deleteSelectedTransactions = async () => {
+    if (currentUser && selectedTransactions.length > 0) {
+      for (const id of selectedTransactions) {
+        await remove(ref(FIREBASE_DB, `users/${currentUser.uid}/transactions/${id}`));
+      }
+    }
+  };
+
+  // Render mỗi giao dịch
   const renderTransaction = ({ item }) => {
     const iconDetails = icons.find((icon) => icon.name === item.category.icon);
     const iconColor = iconDetails ? iconDetails.color : '#6246EA'; // Default color
 
+    const isSelected = selectedTransactions.includes(item.id);
+
     return (
       <TouchableOpacity
         style={styles.transactionContainer}
-        onPress={() => navigation.navigate('Transaction', { transaction: item })} // Điều hướng tới trang Transaction
+        onLongPress={() => handleLongPressTransaction(item.id)}
+        onPress={() => handlePressTransaction(item)}
       >
+        {isSelectionMode && (
+          <Icon
+            name={isSelected ? 'checkbox-marked' : 'checkbox-blank-outline'}
+            size={24}
+            color="#6200ee"
+            style={styles.checkboxIcon}
+          />
+        )}
         <Icon
           name={item.category.icon}
           size={30}
@@ -141,26 +184,30 @@ const AllTransaction = ({ navigation }) => {
         <Text style={styles.transactionAmount}>
           {`${item.type === 'Expense' ? '-' : '+'} ${item.amount} VND`}
         </Text>
-
-        {/* Nút "Select" ở bên phải */}
-        <TouchableOpacity
-          style={styles.selectButton}
-          onPress={() => toggleSelection(item.id)} // Chọn hoặc bỏ chọn giao dịch
-        >
-          <Icon
-            name={selectedTransactions.includes(item.id) ? 'check-circle' : 'circle-outline'}
-            size={24}
-            color={selectedTransactions.includes(item.id) ? 'green' : '#ccc'}
-          />
-        </TouchableOpacity>
       </TouchableOpacity>
     );
   };
 
+  // Cập nhật header để hiển thị icon thùng rác khi isSelectionMode = true
+  useLayoutEffect(() => {
+    if (isSelectionMode) {
+      navigation.setOptions({
+        headerRight: () => (
+          <TouchableOpacity onPress={confirmDeleteSelectedTransactions} style={styles.headerRightIcon}>
+            <Icon name="trash-can-outline" size={25} color="#f44336" />
+          </TouchableOpacity>
+        ),
+      });
+    } else {
+      navigation.setOptions({
+        headerRight: () => null,
+      });
+    }
+  }, [navigation, isSelectionMode, selectedTransactions]);
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        
         <View style={styles.headerIcons}>
           <TouchableOpacity onPress={() => setFilterType('All')}>
             <Text style={[styles.filterButton, filterType === 'All' && styles.activeFilter]}>All</Text>
@@ -184,13 +231,6 @@ const AllTransaction = ({ navigation }) => {
         <Icon name="magnify" size={24} color="#333" />
       </View>
 
-      {/* Show delete button if there are selected transactions */}
-      {selectedTransactions.length > 0 && (
-        <TouchableOpacity onPress={handleDeleteSelected} style={styles.deleteButton}>
-          <Text style={styles.deleteButtonText}>Delete Selected</Text>
-        </TouchableOpacity>
-      )}
-
       <FlatList
         data={filteredTransactions}
         renderItem={renderTransaction}
@@ -212,11 +252,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 20,
-  },
-  headerText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
   },
   headerIcons: {
     flexDirection: 'row',
@@ -259,6 +294,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
   },
+  checkboxIcon: {
+    marginRight: 10,
+  },
   categoryIcon: {
     marginRight: 16,
   },
@@ -279,20 +317,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
   },
-  selectButton: {
-    marginLeft: 10,
-  },
-  deleteButton: {
-    backgroundColor: '#ff3b30',
-    padding: 12,
-    borderRadius: 8,
-    marginVertical: 10,
-    alignItems: 'center',
-  },
-  deleteButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+  headerRightIcon: {
+    marginRight: 15,
   },
 });
 
