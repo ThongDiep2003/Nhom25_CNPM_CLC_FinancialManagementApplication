@@ -117,7 +117,7 @@ const HomePage = () => {
       if (currentUser) {
         const userId = currentUser.uid;
         const userProfile = await getUserProfile(userId);
-
+  
         setUserName(userProfile.name);
         if (userProfile.avatarUrl) {
           const storage = getStorage();
@@ -127,67 +127,80 @@ const HomePage = () => {
         } else {
           setUserAvatar('https://via.placeholder.com/60');
         }
-
+  
         const transactionsRef = ref(FIREBASE_DB, `users/${userId}/transactions`);
         onValue(transactionsRef, (snapshot) => {
           const data = snapshot.val();
-          if (data) {
-            const fetchedTransactions = Object.values(data).reverse();
-
-            const currentDate = new Date();
-            const currentMonth = currentDate.getMonth();
-            const currentYear = currentDate.getFullYear();
-
-            const filteredTransactions = fetchedTransactions.filter((transaction) => {
-              const transactionDate = new Date(transaction.date);
-              return (
-                transactionDate.getMonth() === currentMonth &&
-                transactionDate.getFullYear() === currentYear
-              );
-            });
-
-            setTransactions(filteredTransactions.slice(0, 20));
-
-            let income = 0;
-            let expense = 0;
-            const expenseData = {};
-            const incomeData = {};
-
-            filteredTransactions.forEach((transaction) => {
-              if (transaction.type === 'Income') {
-                income += parseFloat(transaction.amount);
-                if (incomeData[transaction.category.id]) {
-                  incomeData[transaction.category.id].amount += parseFloat(transaction.amount);
-                } else {
-                  const categoryIcon = iconList.find(icon => icon.name === transaction.category.icon);
-                  const color = categoryIcon ? categoryIcon.color : '#6246EA';
-                  incomeData[transaction.category.id] = {
-                    amount: parseFloat(transaction.amount),
-                    color: color,
-                    name: transaction.category.name,
-                  };
-                }
-              } else if (transaction.type === 'Expense') {
-                expense += parseFloat(transaction.amount);
-                if (expenseData[transaction.category.id]) {
-                  expenseData[transaction.category.id].amount += parseFloat(transaction.amount);
-                } else {
-                  const categoryIcon = iconList.find(icon => icon.name === transaction.category.icon);
-                  const color = categoryIcon ? categoryIcon.color : '#6246EA';
-                  expenseData[transaction.category.id] = {
-                    amount: parseFloat(transaction.amount),
-                    color: color,
-                    name: transaction.category.name,
-                  };
-                }
-              }
-            });
-
-            setTotalIncome(income);
-            setTotalExpense(expense);
-            setExpenseCategories(Object.values(expenseData));
-            setIncomeCategories(Object.values(incomeData));
+          
+          // Kiểm tra nếu không có dữ liệu
+          if (!data) {
+            setTransactions([]);
+            setTotalIncome(0);
+            setTotalExpense(0);
+            setExpenseCategories([]);
+            setIncomeCategories([]);
+            return;
           }
+  
+          // Chuyển đổi dữ liệu thành mảng và thêm id
+          const fetchedTransactions = Object.entries(data).map(([id, transaction]) => ({
+            id,
+            ...transaction
+          })).reverse();
+  
+          const currentDate = new Date();
+          const currentMonth = currentDate.getMonth();
+          const currentYear = currentDate.getFullYear();
+  
+          const filteredTransactions = fetchedTransactions.filter((transaction) => {
+            const transactionDate = new Date(transaction.date);
+            return (
+              transactionDate.getMonth() === currentMonth &&
+              transactionDate.getFullYear() === currentYear
+            );
+          });
+  
+          setTransactions(filteredTransactions.slice(0, 20));
+  
+          let income = 0;
+          let expense = 0;
+          const expenseData = {};
+          const incomeData = {};
+  
+          filteredTransactions.forEach((transaction) => {
+            if (transaction.type === 'Income') {
+              income += parseFloat(transaction.amount);
+              if (incomeData[transaction.category.id]) {
+                incomeData[transaction.category.id].amount += parseFloat(transaction.amount);
+              } else {
+                const categoryIcon = iconList.find(icon => icon.name === transaction.category.icon);
+                const color = categoryIcon ? categoryIcon.color : '#6246EA';
+                incomeData[transaction.category.id] = {
+                  amount: parseFloat(transaction.amount),
+                  color: color,
+                  name: transaction.category.name,
+                };
+              }
+            } else if (transaction.type === 'Expense') {
+              expense += parseFloat(transaction.amount);
+              if (expenseData[transaction.category.id]) {
+                expenseData[transaction.category.id].amount += parseFloat(transaction.amount);
+              } else {
+                const categoryIcon = iconList.find(icon => icon.name === transaction.category.icon);
+                const color = categoryIcon ? categoryIcon.color : '#6246EA';
+                expenseData[transaction.category.id] = {
+                  amount: parseFloat(transaction.amount),
+                  color: color,
+                  name: transaction.category.name,
+                };
+              }
+            }
+          });
+  
+          setTotalIncome(income);
+          setTotalExpense(expense);
+          setExpenseCategories(Object.values(expenseData));
+          setIncomeCategories(Object.values(incomeData));
         });
       }
     } catch (error) {
